@@ -1,4 +1,4 @@
-package odensemarcipan.demo.Models;
+package odensemarcipan.demo.models;
 
 import lombok.Data;
 import lombok.Getter;
