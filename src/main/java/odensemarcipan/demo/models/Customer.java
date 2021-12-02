@@ -28,7 +28,7 @@ public class Customer {
     private long phoneNumber;
 
     @ManyToOne
-    @JoinColumn(name = "zipcode",nullable = false)
+    @JoinColumn(name = "zipcode", nullable = false)
     private Zipcode zipcode;
 
     @OneToOne(mappedBy = "customer",fetch = FetchType.LAZY)
