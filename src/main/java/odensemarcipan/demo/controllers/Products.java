@@ -40,7 +40,7 @@ public class Products {
     @GetMapping("/products/{id}")
     public String singleProduct(@PathVariable int id,Model model){
         model.addAttribute("products",productRepository.findAll());
-        return "/single-products/singleProduct-"+id;
+        return "/single-products/singleProduct"+id;
     }
 
 
