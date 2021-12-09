@@ -62,7 +62,7 @@
   <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
   <div class="navbar-sticky bg-light">
     <div class="navbar navbar-expand-lg navbar-light">
-      <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" href="index.html"><img src="/img/logoO.png" width="142" alt="Cartzilla"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index.html"><img src="/img/logo-icon.png" width="74" alt="Cartzilla"></a>
+      <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" th:href="@{'/'}"><img src="/img/logoO.png" width="142" alt="Cartzilla"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index.html"><img src="/img/logo-icon.png" width="74" alt="Cartzilla"></a>
         <div class="input-group d-none d-lg-flex mx-4">
           <input class="form-control rounded-end pe-5" type="text" placeholder="Søg efter produkter"><i class="ci-search position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3"></i>
         </div>
@@ -72,43 +72,6 @@
           <div class="dropdown-menu dropdown-menu-end">
             <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
               <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
-                <div class="widget-cart-item pb-2 border-bottom">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/img/shop/cart/widget/01.jpg" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">Women Colorblock Sneakers</a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">DKK 55.<small>00</small></span><span class="text-muted">x 1</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-cart-item py-2 border-bottom">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/img/shop/cart/widget/02.jpg" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">TH Jeans City Backpack</a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">$DKK 70.<small>50</small></span><span class="text-muted">x 1</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-cart-item py-2 border-bottom">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/img/shop/cart/widget/03.jpg" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">3-Color Sun Stash Hat</a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">$DKK 45.<small>50</small></span><span class="text-muted">x 1</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-cart-item py-2 border-bottom">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="odense" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">Cotton Polo Regular Fit</a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">DKK 34.<small>00</small></span><span class="text-muted">x 1</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
                 <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">$265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
               </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
@@ -129,23 +92,71 @@
         <!-- Primary menu-->
         <div class="centerNav">
           <ul class="navbar-nav">
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Hjem</a>
-            </li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Butik</a>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Marcipan</a>
               <div class="dropdown-menu p-0">
                 <div class="d-flex flex-wrap flex-sm-nowrap px-2">
                   <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
-                    <h6 class="fs-base mb-3">Kategorier</h6>
+                    <h6 class="fs-base mb-3">Marcipan</h6>
                     <ul class="widget-list">
-                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/marcipan'}">Marcipan</a></li>
-                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/chocolate'}">Chokolade</a></li>
-                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/nougat'}">Nugat</a></li>
-                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/decoration'}">Dekoration</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/marcipan'}">Marcipan Overview</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/bagemarcipan'}">Bagermarcipan</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan200g'}">Marcipan 200g</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan400g'}">Marcipan 400g</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan-saltkaramel'}">Marcipan saltkaramel</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan-lakrids'}">Marcipan larkids</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan-kokos'}">Marcipan kokos</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Opskrifter</a>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Chokolade</a>
+              <div class="dropdown-menu p-0">
+                <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                  <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                    <h6 class="fs-base mb-3">Chokolade</h6>
+                    <ul class="widget-list">
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/chocolate'}">Chokolade katalog</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/chokolade-dark200g'}">Mørk chokolade</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/chokolade-milk200g'}">Mælke chokolade</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/chokolade-spaner'}">Chokolade Spåner</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/ruby-knapper'}">Ruby knapper</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/karamel-fudge'}">Karamel fudge</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nougat</a>
+              <div class="dropdown-menu p-0">
+                <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                  <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                    <h6 class="fs-base mb-3">Nougat</h6>
+                    <ul class="widget-list">
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/nougat'}">Nougat katalog</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/nougat'}">Nougat 200 g</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dekoration </a>
+              <div class="dropdown-menu p-0">
+                <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                  <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                    <h6 class="fs-base mb-3">Dekoration</h6>
+                    <ul class="widget-list">
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/decoration'}">Decorations katalog</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/bronze-stoev'}">Bronze Støv</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/guld-stoev'}">Guld Støv</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/rosa-stoev'}">Rosa støv</a></li>
+                      <li class="widget-list-item"><a class="widget-list-link" th:href="@{'//singleproduct/lakrids-knas'}">Lakrids knas</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Opskrifter</a>
             <div class="dropdown-menu p-0">
               <div class="d-flex flex-wrap flex-sm-nowrap px-2">
                 <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
