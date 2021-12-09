@@ -284,14 +284,22 @@
                 <h1 class="h2">Julegave</h1>
                 <h6>Ingredienser</h6>
                 <ul class="list-unstyled fs-sm pt-2 mb-0">
-                  <li><i class="ci-check-circle text-success me-2"></i>Original ODENSE marcipan 300g</li>
+                    <form action="#" th:action=@{'/singleproduct/marcipan400g'}>
+                  <li><i class="ci-check-circle text-success me-2"></i>Original ODENSE marcipan 400g</li>
                   <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i></button>
-                  <li><i class="ci-check-circle text-success me-2"></i>50 g ODENSE Marcipan lakrids - 150 g</li>
+                    </form>
+                    <form action="#" th:action=@{'/singleproduct/marcipan-lakrids'}>
+                        <li><i class="ci-check-circle text-success me-2"></i>50 g ODENSE Marcipan lakrids - 150 g</li>
+                        <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i></button>
+                    </form>
+                        <form action="#" th:action=@{'/singleproduct/figur-marcipan'}>
+                        <li><i class="ci-check-circle text-success me-2"></i>50 g Rød Figurmarcipan med jordbær-rabarbersmag 200 g</li>
                   <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i></button>
-                  <li><i class="ci-check-circle text-success me-2"></i>50 g Rød Figurmarcipan med jordbær-rabarbersmag 200 g</li>
-                  <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i></button>
+                        </form>
+                        <form action="#" th:action=@{'/singleproduct/guld-stoev'}>
                   <li><i class="ci-check-circle text-success me-2"></i>ODENSE Guldstøv - 5 g</li>
                   <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i></button>
+                        </form>
                 </ul>
               </div>
             </div>

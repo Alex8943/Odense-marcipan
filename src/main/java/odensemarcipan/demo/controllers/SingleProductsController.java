@@ -274,4 +274,9 @@ public class SingleProductsController {
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/single-products/singleProduct-15";
     }
+
+    @GetMapping("/singleproduct/figur-marcipan")
+    public String showFigurMarcipan(){
+        return "/single-products/singleProduct-17";
+    }
 }
