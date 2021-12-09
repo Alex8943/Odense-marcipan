@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <title>Kategorier > Marcipan</title>
@@ -343,9 +343,9 @@
         <!-- Product-->
         <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3">
           <div class="card product-card card-static pb-3">
-            <a class="card-img-top d-block overflow-hidden" href="../single-product.html"><img src="/odense-images/Produkter/marcipan_200g.png" alt="Product"></a>
+            <a class="card-img-top d-block overflow-hidden" th:href="@{'/singleproduct/marcipan200g'}"><img src="/odense-images/Produkter/marcipan_200g.png" alt="Product"></a>
             <div class="card-body py-2">
-              <h3 class="product-title fs-sm text-truncate"><a href="single-product.html">Original ODENSE Marcipan 200g</a></h3>
+              <h3 class="product-title fs-sm text-truncate"><a th:href="@{'/singleproduct/marcipan200g'}">Original ODENSE Marcipan 200g</a></h3>
               <div class="product-price"><span class="text-accent">34.<small>95</small></span></div>
             </div>
             <div class="product-floating-btn">
@@ -356,7 +356,7 @@
         <!-- Product-->
         <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3">
           <div class="card product-card card-static pb-3">
-            <a class="card-img-top d-block overflow-hidden" href="single-product.html"><img src="/odense-images/Produkter/marcipan_400g.webp" alt="Product"></a>
+            <a class="card-img-top d-block overflow-hidden" href="@{'/singleproduct/marcipan}"><img src="/odense-images/Produkter/marcipan_400g.webp" alt="Product"></a>
             <div class="card-body py-2">
               <h3 class="product-title fs-sm text-truncate"><a href="single-product.html">Original ODENSE Marcipan 400g</a></h3>
               <div class="product-price"><span class="text-accent">68.<small>95</small></span></div>
