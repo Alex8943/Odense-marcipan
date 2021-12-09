@@ -32,7 +32,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-16";
+        return "redirect:/singleproduct/bagermarcipan";
     }
 
     @GetMapping("/singleproduct/bronze-stoev")
@@ -64,7 +64,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-7";
+        return "redirect:/singleproduct/chokolade-dark200g";
     }
 
     @GetMapping("/singleproduct/chokolade-milk200g")
@@ -96,7 +96,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-10";
+        return "redirect:/singleproduct/guld-stoev";
     }
 
     @GetMapping("/singleproduct/karamel-fudge")
@@ -112,7 +112,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-12";
+        return "redirect:/singleproduct/karamel-fudge";
     }
 
     @GetMapping("/singleproduct/marcipan200g")
@@ -128,7 +128,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-2";
+        return "redirect:/singleproduct/marcipan200g";
     }
 
     @GetMapping("/singleproduct/marcipan400g")
@@ -144,7 +144,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-1";
+        return "redirect:/singleproduct/marcipan400g";
     }
 
     @GetMapping("/singleproduct/marcipan-saltkaramel")
@@ -160,7 +160,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-3";
+        return "redirect:/singleproduct/marcipan-saltkaramel";
     }
 
     @GetMapping("/singleproduct/marcipan-lakrids")
@@ -176,7 +176,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-4";
+        return "redirect:/singleproduct/marcipan-lakrids";
     }
 
     @GetMapping("/singleproduct/marcipan-kokos")
@@ -192,7 +192,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-5";
+        return "redirect:/singleproduct/marcipan-kokus";
     }
 
     @GetMapping("/singleproduct/rosa-stoev")
@@ -208,7 +208,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-9";
+        return "redirect:/singleproduct/rosa-stoev";
     }
 
     @GetMapping("/singleproduct/nougat")
@@ -224,7 +224,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "/single-products/singleProduct-11";
+        return "redirect:/single-products/nougat";
     }
 
     @GetMapping("/singleproduct/chokolade-spaner")
@@ -240,7 +240,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-13";
+        return "redirect:/singleproduct/chokolade-spaner";
     }
 
     @GetMapping("/singleproduct/lakrids-knas")
@@ -256,7 +256,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-14";
+        return "redirect:/singleproduct/lakrids-knas";
     }
 
     @GetMapping("/singleproduct/ruby-knapper")
@@ -272,7 +272,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/singleProduct-15";
+        return "redirect:/singleproduct/ruby-knapper";
     }
 
     @GetMapping("/singleproduct/figur-marcipan")
@@ -287,6 +287,6 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect/single-products/singleProduct-17";
+        return "redirect:/singleproduct/figur-marcipan";
     }
 }
