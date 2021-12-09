@@ -1,6 +1,8 @@
 package odensemarcipan.demo.controllers;
 
+import odensemarcipan.demo.models.ShoppingCart;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -12,7 +14,8 @@ public class RecipesController {
     }
 
     @GetMapping("/grise")
-    public String showGrise(){
+    public String showGrise(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-recipes/recipes-grise";
     }
 

@@ -29,7 +29,9 @@ public class SingleProductsController {
     public String addBageMarcipanToCart(HttpServletRequest request) {
         Product product=productRepository.getById(16);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/bagemarcipan";
@@ -45,7 +47,9 @@ public class SingleProductsController {
     public String addBronzeToCart(HttpServletRequest request) {
         Product product=productRepository.getById(8);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/bronze-stoev";
@@ -61,7 +65,9 @@ public class SingleProductsController {
     public String addDarkToCart(HttpServletRequest request) {
         Product product=productRepository.getById(7);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/chokolade-dark200g";
@@ -77,7 +83,9 @@ public class SingleProductsController {
     public String addToCart(HttpServletRequest request){
         Product product=productRepository.getById(6);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/chokolade-milk200g";
@@ -93,7 +101,9 @@ public class SingleProductsController {
     public String addGuldToCart(HttpServletRequest request) {
         Product product=productRepository.getById(10);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/guld-stoev";
@@ -109,7 +119,9 @@ public class SingleProductsController {
     public String addCaramelFudge(HttpServletRequest request) {
         Product product=productRepository.getById(12);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/karamel-fudge";
@@ -125,7 +137,9 @@ public class SingleProductsController {
     public String addMarcipan200(HttpServletRequest request) {
         Product product=productRepository.getById(2);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/marcipan200g";
@@ -141,7 +155,9 @@ public class SingleProductsController {
     public String addMarcipan400g(HttpServletRequest request){
         Product product=productRepository.getById(1);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/marcipan400g";
@@ -157,7 +173,9 @@ public class SingleProductsController {
     public String addMarcipanSaltCaramel(HttpServletRequest request){
         Product product=productRepository.getById(3);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/marcipan-saltkaramel";
@@ -173,7 +191,9 @@ public class SingleProductsController {
     public String addMarcipanLaqrids(HttpServletRequest request){
         Product product=productRepository.getById(4);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/marcipan-lakrids";
@@ -189,7 +209,9 @@ public class SingleProductsController {
     public String addMarcipanCoconut(HttpServletRequest request){
         Product product=productRepository.getById(5);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/marcipan-kokos";
@@ -205,7 +227,9 @@ public class SingleProductsController {
     public String addRosaStoev(HttpServletRequest request){
         Product product=productRepository.getById(9);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/rosa-stoev";
@@ -221,7 +245,9 @@ public class SingleProductsController {
     public String addNougat(HttpServletRequest request){
         Product product=productRepository.getById(11);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/nougat";
@@ -237,25 +263,36 @@ public class SingleProductsController {
     public String addChocolateSpaner(HttpServletRequest request){
         Product product=productRepository.getById(13);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/chokolade-spaner";
     }
 
     @GetMapping("/singleproduct/lakrids-knas")
-    public String showLaqridsKnas(Model model){
+    public String showLakridsKnas(Model model){
         model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-14";
     }
 
     @PostMapping("/singleproduct/lakrids-knas")
-    public String addLaqridsKnas(HttpServletRequest request){
+    public String addLakridsKnas(HttpServletRequest request){
         Product product=productRepository.getById(14);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
+
+        /*switch (request.getParameter("redirect")){
+            case "pig":
+                return "redirect:/single-recipes/recipes-grise";
+            case "nut":
+                return "redirect:/single-recipes/recipes-hasselnoedder";
+        }*/
         return "redirect:/singleproduct/lakrids-knas";
     }
 
@@ -269,7 +306,9 @@ public class SingleProductsController {
     public String addRubyKnaps(HttpServletRequest request){
         Product product=productRepository.getById(15);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/ruby-knapper";
@@ -284,7 +323,9 @@ public class SingleProductsController {
     public String addFigurMarcipan(HttpServletRequest request){
         Product product=productRepository.getById(17);
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        if(request.getParameter("amount")!=null){
+            shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        }
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/figur-marcipan";

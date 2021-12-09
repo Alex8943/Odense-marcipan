@@ -20,6 +20,8 @@ public class ShoppingCart {
     @Column
     private int amount;
 
+    private String redirect;
+
     @ManyToOne
     @JoinColumn(name = "productId",nullable = false)
     private Product product;
