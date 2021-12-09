@@ -44,6 +44,7 @@ public class SingleProductsController {
     public String addToCart(HttpServletRequest request){
         Product product=productRepository.getById(6);
         ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
         return "redirect:/singleproduct/chokolade-milk200g";
