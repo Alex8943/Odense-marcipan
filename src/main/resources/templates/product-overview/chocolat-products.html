@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <title>Kategorier > Chokolade</title>
@@ -341,10 +341,10 @@
         <!-- Product-->
         <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3">
           <div class="card product-card card-static pb-3">
-            <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single-product.html"><img src="/odense-images/Produkter/maelke-chokolade-200g.png" alt="Product"></a>
-            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">Fruits and Vegetables</a>
-              <h3 class="product-title fs-sm text-truncate"><a href="single-product.html">Coconut, Indonesia (piece)</a></h3>
-              <div class="product-price"><span class="text-accent">$2.<small>99</small></span></div>
+           <a class="card-img-top d-block overflow-hidden" th:href="@{'/singleproduct/chokolade-milk200g'}"><img src="/odense-images/Produkter/maelke-chokolade-200g.png" alt="Product"></a>
+            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#"></a>
+              <h3 class="product-title fs-sm text-truncate"><a th:href="@{'/singleproduct/chokolade-milk200g'}">ODENSE Mælkechokolade 200g</a></h3>
+              <div class="product-price"><span class="text-accent">32,<small>95</small></span></div>
             </div>
             <div class="product-floating-btn">
               <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
@@ -354,10 +354,10 @@
         <!-- Product-->
         <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3">
           <div class="card product-card card-static pb-3">
-            <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single-product.html"><img src="/odense-images/Produkter/chokoladeknapper-p2.jpg" alt="Product"></a>
-            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">Dairy and Eggs</a>
-              <h3 class="product-title fs-sm text-truncate"><a href="single-product.html">Soft Creme Cheese (200g)</a></h3>
-              <div class="product-price"><span class="text-accent">$3.<small>99</small></span></div>
+            <a class="card-img-top d-block overflow-hidden" th:href="@{'/singleproduct/chokolade-spaner'}"><img src="/odense-images/Produkter/chokoladeknapper-p2.jpg" alt="Product"></a>
+            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#"></a>
+              <h3 class="product-title fs-sm text-truncate"><a th:href="@{'/singleproduct/chokolade-spaner'}">ODENSE Chokolade Spåner</a></h3>
+              <div class="product-price"><span class="text-accent">24,<small>95</small></span></div>
             </div>
             <div class="product-floating-btn">
               <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
@@ -366,49 +366,43 @@
         </div>
         <!-- Product-->
         <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3">
-          <div class="card product-card card-static pb-3"><span class="badge bg-danger badge-shadow">Sale</span>
-            <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single-product.html"><img src="/odense-images/Produkter/moerk-chokolade-55-200g.png" alt="Product"></a>
-            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">Soft Drinks and Juice</a>
-              <h3 class="product-title fs-sm text-truncate"><a href="single-product.html">Pepsi Soda Can (.33ml)</a></h3>
-              <div class="product-price"><span class="text-accent">$1.<small>00</small></span>
-                <del class="fs-sm text-muted">$1.<small>25</small></del>
+          <div class="card product-card card-static pb-3">
+            <a class="card-img-top d-block overflow-hidden" th:href="@{'/singleproduct/chokolade-dark200g'}"><img src="/odense-images/Produkter/moerk-chokolade-55-200g.png" alt="Product"></a>
+            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#"></a>
+              <h3 class="product-title fs-sm text-truncate"><a th:href="@{'/singleproduct/chokolade-dark200g}">ODENSE Mørk Chokolade 55% 200g</a></h3>
+              <div class="product-price"><span class="text-accent">32,<small>95</small></span></div>
+              <div class="product-floating-btn">
+                <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
               </div>
-            </div>
-            <div class="product-floating-btn">
-              <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
-            </div>
+              </div>
           </div>
         </div>
              <!-- Product-->
              <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3">
-              <div class="card product-card card-static pb-3"><span class="badge bg-danger badge-shadow">Sale</span>
-                <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single-product.html"><img src="/odense-images/Produkter/karamel-fudge.png" alt="Product"></a>
-                <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">Soft Drinks and Juice</a>
-                  <h3 class="product-title fs-sm text-truncate"><a href="single-product.html">Pepsi Soda Can (.33ml)</a></h3>
-                  <div class="product-price"><span class="text-accent">$1.<small>00</small></span>
-                    <del class="fs-sm text-muted">$1.<small>25</small></del>
+              <div class="card product-card card-static pb-3">
+                <a class="card-img-top d-block overflow-hidden" th:href="@{'/singleproduct/karamel-fudge'}"><img src="/odense-images/Produkter/karamel-fudge.png" alt="Product"></a>
+                <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#"></a>
+                  <h3 class="product-title fs-sm text-truncate"><a th:href="@{'/singleproduct/karamel-fudge'}">ODENSE Karamel Fudge</a></h3>
+                  <div class="product-price"><span class="text-accent">24,<small>95</small></span></div>
+                  <div class="product-floating-btn">
+                    <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
                   </div>
                 </div>
-                <div class="product-floating-btn">
-                  <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
-                </div>
               </div>
+             </div>
                    <!-- Product-->
         <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3">
-          <div class="card product-card card-static pb-3"><span class="badge bg-danger badge-shadow">Sale</span>
-            <button class="btn-wishlist btn-sm" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="ci-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single-product.html"><img src="/odense-images/Produkter/ruby-knapper.png" alt="Product"></a>
-            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#">Soft Drinks and Juice</a>
-              <h3 class="product-title fs-sm text-truncate"><a href="single-product.html">Pepsi Soda Can (.33ml)</a></h3>
-              <div class="product-price"><span class="text-accent">$1.<small>00</small></span>
-                <del class="fs-sm text-muted">$1.<small>25</small></del>
+          <div class="card product-card card-static pb-3">
+            <a class="card-img-top d-block overflow-hidden" th:href="@{'/singleproduct/ruby-knapper'}"><img src="/odense-images/Produkter/ruby-knapper.png" alt="Product"></a>
+            <div class="card-body py-2"><a class="product-meta d-block fs-xs pb-1" href="#"></a>
+              <h3 class="product-title fs-sm text-truncate"><a th:href="@{'/singleproduct/ruby-knapper'}">ODENSE Ruby Knapper</a></h3>
+              <div class="product-price"><span class="text-accent">28,<small>95</small></span></div>
+              <div class="product-floating-btn">
+                <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
               </div>
-            </div>
-            <div class="product-floating-btn">
-              <button class="btn btn-primary btn-shadow btn-sm" type="button">+<i class="ci-cart fs-base ms-1"></i></button>
             </div>
           </div>
         </div>
-            </div>
         <div class="py-4 pb-md-5 mb-4">
           <!-- Pagination-->
           <nav class="d-flex justify-content-between pt-2" aria-label="Page navigation">
@@ -418,10 +412,6 @@
             <ul class="pagination">
               <li class="page-item d-sm-none"><span class="page-link page-link-static">1 / 5</span></li>
               <li class="page-item active d-none d-sm-block" aria-current="page"><span class="page-link">1<span class="visually-hidden">(current)</span></span></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">2</a></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">3</a></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">4</a></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">5</a></li>
             </ul>
             <ul class="pagination">
               <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next<i class="ci-arrow-right ms-2"></i></a></li>
