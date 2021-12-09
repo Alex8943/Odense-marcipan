@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
     <meta charset="utf-8">
-    <title>Cartzilla | Grocery - Single product</title>
+    <title>Odense Marcipan</title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Cartzilla - Bootstrap E-commerce Template">
     <meta name="keywords" content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap, html5, css3, js, gallery, slider, touch, creative, clean">
@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon and Touch Icons-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" color="#fe6a6a" href="/safari-pinned-tab.svg">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -20,196 +20,220 @@
     <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
     <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css"/>
     <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css"/>
-    <!-- Main Theme Styles + Bootstrap-->
+    <!-- Main Theme Styles + Bootstrap--->
     <link rel="stylesheet" media="screen" href="/styles/theme.min.css">
-  </head>
-  <!-- Body-->
-    <body>
-    <header class="shadow-sm">
-      <!-- Topbar-->
-      <div class="topbar topbar-dark bg-dark">
+</head>
+<!-- Body-->
+<body class="handheld-toolbar-enabled">
+<!-- Navbar 3 Level (Light)-->
+<header class="shadow-sm">
+    <!-- Topbar-->
+    <div class="topbar topbar-dark bg-dark">
         <div class="container">
-          <div class="topbar-text dropdown d-md-none"><a class="topbar-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Useful links</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="tel:00331697720"><i class="ci-support text-muted me-2"></i>+4563117200</a></li>
-            </ul>
-          </div>
-          <div class="topbar-text text-nowrap d-none d-md-inline-block"><i class="ci-support"></i><span class="text-muted me-1">Kunde service</span><a class="topbar-link" href="tel:00331697720">+4563117200</a></div>
-          <div class="tns-carousel tns-controls-static d-none d-md-block">
-            <div class="tns-carousel-inner" data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;nav&quot;: false}">
-              <div class="topbar-text">GRATIS FRAGT VED KØB OVER 499kr</div>
-              <div class="topbar-text">We return money within 30 days</div>
-              <div class="topbar-text">Friendly 24/7 customer support</div>
+            <div class="topbar-text dropdown d-md-none"><a class="topbar-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Useful links</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="tel:00331697720"><i class="ci-support text-muted me-2"></i>+4563117200</a></li>
+                </ul>
             </div>
-          </div>
-          <div class="ms-3 text-nowrap"><a class="topbar-link me-4 d-none d-md-inline-block"><i class="ci-location"></i>Levering 3-5 dage</a>
-          </div>
+            <div class="topbar-text text-nowrap d-none d-md-inline-block"><i class="ci-support"></i><span class="text-muted me-1">Kundeservice</span><a class="topbar-link" href="tel:00331697720">+4563117200</a></div>
+            <div class="tns-carousel tns-controls-static d-none d-md-block">
+                <div class="tns-carousel-inner" data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;nav&quot;: false}">
+                    <div class="topbar-text">GRATIS FRAGT VED KØB OVER 499kr</div>
+                </div>
+            </div>
+            <div class="ms-3 text-nowrap"><a class="topbar-link me-4 d-none d-md-inline-block"><i class="ci-location"></i>Levering 3-5 dage</a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                        <select class="form-select form-select-sm">
+                            <option value="usd">$ USD</option>
+                            <option value="eur">€ EUR</option>
+                            <option value="ukp">£ UKP</option>
+                            <option value="jpy">¥ JPY</option>
+                        </select>
+                    </li>
+                    <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="/img/flags/fr.png" width="20" alt="Français">Français</a></li>
+                    <li><a class="dropdown-item pb-1" href="#"><img class="me-2" src="/img/flags/de.png" width="20" alt="Deutsch">Deutsch</a></li>
+                    <li><a class="dropdown-item" href="#"><img class="me-2" src="/img/flags/it.png" width="20" alt="Italiano">Italiano</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      </div>
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
-      <div class="navbar-sticky bg-light">
+    </div>
+    </div>
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+    <div class="navbar-sticky bg-light">
         <div class="navbar navbar-expand-lg navbar-light">
-          <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" href="../index.html"><img src="/img/logoO.png" width="142" alt="Cartzilla"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="../index.html"><img src="/img/logo-icon.png" width="74" alt="Cartzilla"></a>
-            <div class="input-group d-none d-lg-flex mx-4">
-              <input class="form-control rounded-end pe-5" type="text" placeholder="Søg efter produkter"><i class="ci-search position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3"></i>
-            </div>
-            <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-tool navbar-stuck-toggler" href="#"><span class="navbar-tool-tooltip">Expand menu</span>
-              <!-- Cart dropdown-->
-              <div class="dropdown-menu dropdown-menu-end">
-                <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
-                  <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
-                    <div class="widget-cart-item pb-2 border-bottom">
-                      <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                      <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/img/shop/cart/widget/01.jpg" width="64" alt="Product"></a>
-                        <div class="ps-2">
-                          <h6 class="widget-product-title"><a href="shop-single-v1.html">Women Colorblock Sneakers</a></h6>
-                          <div class="widget-product-meta"><span class="text-accent me-2">$150.<small>00</small></span><span class="text-muted">x 1</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="widget-cart-item py-2 border-bottom">
-                      <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                      <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/img/shop/cart/widget/02.jpg" width="64" alt="Product"></a>
-                        <div class="ps-2">
-                          <h6 class="widget-product-title"><a href="shop-single-v1.html">TH Jeans City Backpack</a></h6>
-                          <div class="widget-product-meta"><span class="text-accent me-2">$79.<small>50</small></span><span class="text-muted">x 1</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="widget-cart-item py-2 border-bottom">
-                      <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                      <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/img/shop/cart/widget/03.jpg" width="64" alt="Product"></a>
-                        <div class="ps-2">
-                          <h6 class="widget-product-title"><a href="shop-single-v1.html">3-Color Sun Stash Hat</a></h6>
-                          <div class="widget-product-meta"><span class="text-accent me-2">$22.<small>50</small></span><span class="text-muted">x 1</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="widget-cart-item py-2 border-bottom">
-                      <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                      <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/img/shop/cart/widget/04.jpg" width="64" alt="Product"></a>
-                        <div class="ps-2">
-                          <h6 class="widget-product-title"><a href="shop-single-v1.html">Cotton Polo Regular Fit</a></h6>
-                          <div class="widget-product-meta"><span class="text-accent me-2">$9.<small>00</small></span><span class="text-muted">x 1</span></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
-                    <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">$265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
-                  </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
+            <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" th:href="@{'/frontpage'}"><img src="/img/logoO.png" width="142" alt="Cartzilla"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index.html"><img src="/img/logo-icon.png" width="74" alt="Cartzilla"></a>
+                <div class="input-group d-none d-lg-flex mx-4">
+                    <input class="form-control rounded-end pe-5" type="text" placeholder="Søg efter produkter"><i class="ci-search position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3"></i>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu mt-n2 pt-0 pb-2">
-        <div class="container">
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <!-- Search-->
-            <div class="input-group d-lg-none my-3"><i class="ci-search position-absolute top-50 start-0 translate-middle-y text-muted fs-base ms-3"></i>
-              <input class="form-control rounded-start" type="text" placeholder="Search for products">
-            </div>
-       <!-- Primary menu-->
-              <div class="centerNav">
-                  <ul class="navbar-nav">
-                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Hjem</a>
-                      </li>
-                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Butik</a>
-                          <div class="dropdown-menu p-0">
-                              <div class="d-flex flex-wrap flex-sm-nowrap px-2">
-                                  <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
-                                      <h6 class="fs-base mb-3">Kategorier</h6>
-                                      <ul class="widget-list">
-                                          <li class="widget-list-item"><a class="widget-list-link" href="../product-overview/marcipan-products.html">Marcipan</a></li>
-                                          <li class="widget-list-item"><a class="widget-list-link" href="../product-overview/chocolat-products.html">Chokolade</a></li>
-                                          <li class="widget-list-item"><a class="widget-list-link" href="../product-overview/nougat-products.html">Nugat</a></li>
-                                          <li class="widget-list-item"><a class="widget-list-link" href="../product-overview/decoration-products.html">Dekoration</a></li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                      </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Opskrifter</a>
-                      <div class="dropdown-menu p-0">
-                          <div class="d-flex flex-wrap flex-sm-nowrap px-2">
-                              <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
-                                  <h6 class="fs-base mb-3">Opskrifter</h6>
-                                  <ul class="widget-list">
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-kransekage.html">Kransekagetop</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-vanilje.html">Vaniljekranse med marcipan</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-hasselnoedder.html">Nougat småkager med hasselnødder</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-grise.html">Marcipan gris</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-kokos.html">Kokos-marcipanbar</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-julegave.html">Julegaver</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-julekugler.html">Julekugler</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-julesmaekager.html">Julesmåkager</a></li>
-                                    <li class="widget-list-item"><a class="widget-list-link" href="./recipes-troefler.html">Chokolade trøfler</a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-                  </ul>
-              </div>
-
-          </div>
-            <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="/shop-list.html"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text" href="shop-list.html"><small>Min Kurv</small>DKK </a>
-
-                <!-- Cart dropdown-->
-                <div class="dropdown-menu dropdown-menu-end">
-                    <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
-                        <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
-                            <div class="widget-cart-item pb-2 border-bottom">
-                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/chokolade-kategori.png" width="64" alt="Product"></a>
-                                    <div class="ps-2">
-                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Chokolade</a></h6>
-                                        <div class="widget-product-meta"><span class="text-accent me-2">DKK150.<small>00</small></span><span class="text-muted">x 1</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-cart-item py-2 border-bottom">
-                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/marcipan_kategori.png" width="64" alt="Product"></a>
-                                    <div class="ps-2">
-                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Marcipan</a></h6>
-                                        <div class="widget-product-meta"><span class="text-accent me-2">DKK 79.<small>50</small></span><span class="text-muted">x 1</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-cart-item py-2 border-bottom">
-                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/nougat-kategori.png" width="64" alt="Product"></a>
-                                    <div class="ps-2">
-                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Nougat </a></h6>
-                                        <div class="widget-product-meta"><span class="text-accent me-2">DKK 22.<small>50</small></span><span class="text-muted">x 1</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-cart-item py-2 border-bottom">
-                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/dekorations-kategori.png" width="64" alt="Product"></a>
-                                    <div class="ps-2">
-                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">dekoration</a></h6>
-                                        <div class="widget-product-meta"><span class="text-accent me-2">Dkk 9.<small>00</small></span><span class="text-muted">x 1</span></div>
-                                    </div>
-                                </div>
+                <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-tool navbar-stuck-toggler" href="#"><span class="navbar-tool-tooltip">Expand menu</span>
+                    <!-- Cart dropdown-->
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
+                            <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                                    <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">$265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
+                                </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
                             </div>
                         </div>
-                        <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
-                            <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">DKK265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="/shop-list.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
-                        </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-d4etails.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
                     </div>
+
                 </div>
             </div>
+        </div>
+        <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu mt-n2 pt-0 pb-2">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <!-- Search-->
+                    <div class="input-group d-lg-none my-3"><i class="ci-search position-absolute top-50 start-0 translate-middle-y text-muted fs-base ms-3"></i>
+                        <input class="form-control rounded-start" type="text" placeholder="Search for products">
+                    </div>
+                    <!-- Primary menu-->
+                    <div class="centerNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Marcipan</a>
+                                <div class="dropdown-menu p-0">
+                                    <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                                        <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                                            <h6 class="fs-base mb-3">Marcipan</h6>
+                                            <ul class="widget-list">
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/marcipan'}">Marcipan Overview</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/bagemarcipan'}">Bagermarcipan</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan200g'}">Marcipan 200g</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan400g'}">Marcipan 400g</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan-saltkaramel'}">Marcipan saltkaramel</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan-lakrids'}">Marcipan larkids</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/marcipan-kokos'}">Marcipan kokos</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Chokolade</a>
+                                <div class="dropdown-menu p-0">
+                                    <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                                        <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                                            <h6 class="fs-base mb-3">Chokolade</h6>
+                                            <ul class="widget-list">
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/chocolate'}">Chokolade katalog</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/chokolade-dark200g'}">Mørk chokolade</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/chokolade-milk200g'}">Mælke chokolade</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/chokolade-spaner'}">Chokolade Spåner</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/ruby-knapper'}">Ruby knapper</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/karamel-fudge'}">Karamel fudge</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nougat</a>
+                                <div class="dropdown-menu p-0">
+                                    <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                                        <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                                            <h6 class="fs-base mb-3">Nougat</h6>
+                                            <ul class="widget-list">
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/nougat'}">Nougat katalog</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/nougat'}">Nougat 200 g</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dekoration </a>
+                                <div class="dropdown-menu p-0">
+                                    <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                                        <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                                            <h6 class="fs-base mb-3">Dekoration</h6>
+                                            <ul class="widget-list">
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/products/decoration'}">Decorations katalog</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/bronze-stoev'}">Bronze Støv</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/guld-stoev'}">Guld Støv</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/singleproduct/rosa-stoev'}">Rosa støv</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'//singleproduct/lakrids-knas'}">Lakrids knas</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Opskrifter</a>
+                                <div class="dropdown-menu p-0">
+                                    <div class="d-flex flex-wrap flex-sm-nowrap px-2">
+                                        <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
+                                            <h6 class="fs-base mb-3">Opskrifter</h6>
+                                            <ul class="widget-list">
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/grise'}">JuleGris</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/hasselnoedder'}">Nougat småkager med hasselnødder</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/julegave'}">Julegave</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/julekugler'}">JulekugleMarcipan gris</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/julesmaekager'}">Julesmåkager</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/kokos'}">Kokus-marcipanbar</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/kransekage'}">Kransekagetop</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/troefler'}">Chokolade trøfler</a></li>
+                                                <li class="widget-list-item"><a class="widget-list-link" th:href="@{'/vanilje'}">Vaniljekranse med marcipan</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
+                </div>
+                <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="/shop-list.html"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text" href="/shop-list.html"><small>Min Kurv</small>DKK </a>
+
+                    <!-- Cart dropdown-->
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
+                            <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
+                                <div class="widget-cart-item pb-2 border-bottom">
+                                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/chokolade-kategori.png" width="64" alt="Product"></a>
+                                        <div class="ps-2">
+                                            <h6 class="widget-product-title"><a href="shop-single-v1.html">Chokolade</a></h6>
+                                            <div class="widget-product-meta"><span class="text-accent me-2">DKK150.<small>00</small></span><span class="text-muted">x 1</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-cart-item py-2 border-bottom">
+                                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/marcipan_kategori.png" width="64" alt="Product"></a>
+                                        <div class="ps-2">
+                                            <h6 class="widget-product-title"><a href="shop-single-v1.html">Marcipan</a></h6>
+                                            <div class="widget-product-meta"><span class="text-accent me-2">DKK 79.<small>50</small></span><span class="text-muted">x 1</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-cart-item py-2 border-bottom">
+                                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/nougat-kategori.png" width="64" alt="Product"></a>
+                                        <div class="ps-2">
+                                            <h6 class="widget-product-title"><a href="shop-single-v1.html">Nougat </a></h6>
+                                            <div class="widget-product-meta"><span class="text-accent me-2">DKK 22.<small>50</small></span><span class="text-muted">x 1</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-cart-item py-2 border-bottom">
+                                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/dekorations-kategori.png" width="64" alt="Product"></a>
+                                        <div class="ps-2">
+                                            <h6 class="widget-product-title"><a href="shop-single-v1.html">dekoration</a></h6>
+                                            <div class="widget-product-meta"><span class="text-accent me-2">Dkk 9.<small>00</small></span><span class="text-muted">x 1</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                                <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">DKK265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
+                            </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-        </div>
-    </header>
+    </div>
+</header>
     <!-- Back To Top Button--><a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ci-arrow-up">   </i></a>
     <!-- Vendor scrits: js libraries and plugins-->
     <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
