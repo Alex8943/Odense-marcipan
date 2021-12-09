@@ -14,37 +14,37 @@ public class SingleProductsController {
 
     @GetMapping("/singleproduct/bagemarcipan")
     public String showBageMarcipan() {
-        return "/single-products/bagemarcipan-3";
+        return "singleProduct-16";
     }
 
     @GetMapping("/singleproduct/bronze-stoev")
     public String showBronzeStoev() {
-        return "/single-products/Bronze-stoev";
+        return "singleProduct-8";
     }
 
     @GetMapping("/singleproduct/chokolade-dark200g")
     public String showChocolateDark() {
-        return "/single-products/chokolade-dark200g";
+        return "singleProduct-7";
     }
 
     @GetMapping("/singleproduct/chokolade-milk200g")
     public String showChocolateMilk() {
-        return "/single-products/chokolade-milk200g";
+        return "singleProduct-6";
     }
 
     @GetMapping("/singleproduct/guld-stoev")
     public String showGuldStoev() {
-        return "/single-products/guld-stoev-5g";
+        return "singleProduct-10";
     }
 
     @GetMapping("/singleproduct/karamel-fudge")
     public String showCaramelFudge() {
-        return "/single-products/karamel-fudge";
+        return "singleProduct-12";
     }
 
     @GetMapping("/singleproduct/marcipan200g")
     public String showMarcipan200() {
-        return "/single-products/marcipan200g";
+        return "singleProduct-2";
     }
 
 }
