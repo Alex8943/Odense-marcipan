@@ -282,16 +282,16 @@
                     <div class="h-100 bg-light rounded-3 py-5 px-4 px-sm-5"><a class="product-meta d-block fs-sm pb-2" href="#">Marcipan</a>
                         <h1 class="h2">Rød Figurmarcipan med jordbær-rabarbersmag 200 g</h1>
                         <div class="h2 fw-normal text-accent">32.<small>95</small></div>
-                        <div class="d-flex flex-wrap align-items-center pt-4 pb-2 mb-3">
-                            <select class="form-select me-3 mb-3" style="width: 5rem;">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                        <form action="#" th:action=@{'/singleproduct/figur-marcipan'} th:object="{product}" method="post">
+                            <select th:field="*{amount}" class="form-select me-3 mb-3" style="width: 5rem;">
+                                <option th:value="'1'" th:text="1"></option>
+                                <option th:value="'2'" th:text="2"></option>
+                                <option th:value="'3'" th:text="3"></option>
+                                <option th:value="'4'" th:text="4"></option>
+                                <option th:value="'5'" th:text="5"></option>
                             </select>
                             <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i>Tilføj til kurv</button>
-                        </div>
+                        </form>
                         <h6>Produkt beskrivelse</h6>
                         <ul class="list-unstyled fs-sm pt-2 mb-0">
                             <li><i class="ci-check-circle text-success me-2"></i>Indeholder 23% mandler.</li>

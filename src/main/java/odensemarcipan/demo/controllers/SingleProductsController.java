@@ -276,7 +276,17 @@ public class SingleProductsController {
     }
 
     @GetMapping("/singleproduct/figur-marcipan")
-    public String showFigurMarcipan(){
+    public String showFigurMarcipan(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-17";
+    }
+    @PostMapping("/singleproduct/figur-marcipan")
+    public String addFigurMarcipan(HttpServletRequest request){
+        Product product=productRepository.getById(17);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect/single-products/singleProduct-17";
     }
 }
