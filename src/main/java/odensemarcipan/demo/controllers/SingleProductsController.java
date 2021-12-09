@@ -1,16 +1,23 @@
 package odensemarcipan.demo.controllers;
 
+import odensemarcipan.demo.models.Product;
+import odensemarcipan.demo.models.ShoppingCart;
 import odensemarcipan.demo.repositories.ProductRepository;
+import odensemarcipan.demo.repositories.ShoppingCartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class SingleProductsController {
 
     @Autowired
     ProductRepository productRepository;
-
+    @Autowired
+    ShoppingCartRepository shoppingCartRepository;
 
     @GetMapping("/singleproduct/bagemarcipan")
     public String showBageMarcipan() {
@@ -28,8 +35,18 @@ public class SingleProductsController {
     }
 
     @GetMapping("/singleproduct/chokolade-milk200g")
-    public String showChocolateMilk() {
+    public String showChocolateMilk(Model model) {
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-6";
+    }
+
+    @PostMapping("/singleproduct/chokolade-milk200g")
+    public String addToCart(HttpServletRequest request){
+        Product product=productRepository.getById(6);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/singleproduct/chokolade-milk200g";
     }
 
     @GetMapping("/singleproduct/guld-stoev")

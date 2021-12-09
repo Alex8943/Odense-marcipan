@@ -282,7 +282,7 @@
                     <div class="h-100 bg-light rounded-3 py-5 px-4 px-sm-5"><a class="product-meta d-block fs-sm pb-2" href="#">Marcipan</a>
                         <h1 class="h2">ODENSE Lakrids Knas crisp knas med naturlig farve 75g</h1>
                         <div class="h2 fw-normal text-accent">25.<small>95</small></div>
-                        <form th:action=@{'/products/'+${id}}>
+                        <form action="#" th:action=@{'/single-products/add-to-cart/'+${id}} th:object="${products}" method="post">
                         <div class="d-flex flex-wrap align-items-center pt-4 pb-2 mb-3">
                             <select class="form-select me-3 mb-3" style="width: 5rem;">
                                 <option value="1">1</option>
@@ -291,7 +291,7 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i>Tilføj til kurv</button>
+                            <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i> til kurv</button>
                         </div>
                         </form>
                         <h6>Produkt beskrivelse</h6>

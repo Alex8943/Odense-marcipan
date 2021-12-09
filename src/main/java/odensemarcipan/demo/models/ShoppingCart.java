@@ -13,17 +13,19 @@ import javax.persistence.*;
 public class ShoppingCart {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column
     private int id;
 
+    @Column
+    private int amount;
 
     @ManyToOne
     @JoinColumn(name = "productId",nullable = false)
     private Product product;
 
-
     @OneToOne
-    @JoinColumn(name = "customerId",nullable = false, referencedColumnName = "id")
+    @JoinColumn(name = "customerId",nullable = true, referencedColumnName = "id")
     private Customer customer;
 
 

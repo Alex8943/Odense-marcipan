@@ -38,17 +38,23 @@ public class Products {
    }
 
     @GetMapping("/products/{id}")
-    public String singleProduct(@PathVariable int id,Model model){
+    public String singleProduct(@RequestParam int id,Model model){
         model.addAttribute("products",productRepository.findAll());
-        return "/single-products/singleProduct"+id;
+        return "/single-products/singleProduct-"+id;
     }
 
-
-    @PostMapping("/products")
-    public void addToShoppingCart(@RequestParam String id, @ModelAttribute ShoppingCart shoppingCart){
+    @PostMapping("/single-products/add-to-cart/")
+    public String addToShoppingCart(@RequestParam int id, @ModelAttribute ShoppingCart shoppingCart){
         System.out.println("yeet");
+        ShoppingCart shoppingcart = new ShoppingCart();
+        shoppingcart.setProduct(productRepository.getById(id));
         shoppingCartRepository.save(shoppingCart);
+
+        return "redirect:/products/singleProducts-"+id;
     }
+
+
+
 
 
 }
