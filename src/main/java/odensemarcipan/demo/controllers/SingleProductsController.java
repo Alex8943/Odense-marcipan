@@ -32,7 +32,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/singleproduct/bagermarcipan";
+        return "redirect:/singleproduct/bagemarcipan";
     }
 
     @GetMapping("/singleproduct/bronze-stoev")
@@ -133,7 +133,7 @@ public class SingleProductsController {
 
     @GetMapping("/singleproduct/marcipan400g")
     public String showMarcipan400g(Model model) {
-        model.addAttribute("product", new ShoppingCarts());
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-1";
     }
 
@@ -149,7 +149,7 @@ public class SingleProductsController {
 
     @GetMapping("/singleproduct/marcipan-saltkaramel")
     public String showMarcipanSaltCaramel(Model model) {
-        model.addAttribute("products", new ShoppingCart());
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-3";
     }
 
@@ -192,7 +192,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/singleproduct/marcipan-kokus";
+        return "redirect:/singleproduct/marcipan-kokos";
     }
 
     @GetMapping("/singleproduct/rosa-stoev")
@@ -224,7 +224,7 @@ public class SingleProductsController {
         shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         shoppingCart.setProduct(product);
         shoppingCartRepository.save(shoppingCart);
-        return "redirect:/single-products/nougat";
+        return "redirect:/singleproduct/nougat";
     }
 
     @GetMapping("/singleproduct/chokolade-spaner")

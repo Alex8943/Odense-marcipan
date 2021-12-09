@@ -282,7 +282,7 @@
                     <div class="h-100 bg-light rounded-3 py-5 px-4 px-sm-5"><a class="product-meta d-block fs-sm pb-2" href="#">Marcipan</a>
                         <h1 class="h2">Rød Figurmarcipan med jordbær-rabarbersmag 200 g</h1>
                         <div class="h2 fw-normal text-accent">32.<small>95</small></div>
-                        <form action="#" th:action=@{'/singleproduct/figur-marcipan'} th:object="{product}" method="post">
+                        <form action="#" th:action=@{'figur-marcipan'} th:object="${product}" method="post">
                             <select th:field="*{amount}" class="form-select me-3 mb-3" style="width: 5rem;">
                                 <option th:value="'1'" th:text="1"></option>
                                 <option th:value="'2'" th:text="2"></option>
