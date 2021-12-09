@@ -20,18 +20,51 @@ public class SingleProductsController {
     ShoppingCartRepository shoppingCartRepository;
 
     @GetMapping("/singleproduct/bagemarcipan")
-    public String showBageMarcipan() {
+    public String showBageMarcipan(Model model) {
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-16";
     }
 
+    @PostMapping("/singleproduct/bagemarcipan")
+    public String addBageMarcipanToCart(HttpServletRequest request) {
+        Product product=productRepository.getById(16);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-16";
+    }
+
     @GetMapping("/singleproduct/bronze-stoev")
-    public String showBronzeStoev() {
+    public String showBronzeStoev(Model model) {
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-8";
     }
 
+    @PostMapping("/singleproduct/bronze-stoev")
+    public String addBronzeToCart(HttpServletRequest request) {
+        Product product=productRepository.getById(8);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/singleproduct/bronze-stoev";
+    }
+
     @GetMapping("/singleproduct/chokolade-dark200g")
-    public String showChocolateDark() {
+    public String showChocolateDark(Model model) {
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-7";
+    }
+
+    @PostMapping("/singleproduct/chokolade-dark200g")
+    public String addDarkToCart(HttpServletRequest request) {
+        Product product=productRepository.getById(7);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-7";
     }
 
     @GetMapping("/singleproduct/chokolade-milk200g")
@@ -51,62 +84,194 @@ public class SingleProductsController {
     }
 
     @GetMapping("/singleproduct/guld-stoev")
-    public String showGuldStoev() {
+    public String showGuldStoev(Model model) {
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-10";
     }
 
+    @PostMapping("/singleproduct/guld-stoev")
+    public String addGuldToCart(HttpServletRequest request) {
+        Product product=productRepository.getById(10);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-10";
+    }
+
     @GetMapping("/singleproduct/karamel-fudge")
-    public String showCaramelFudge() {
+    public String showCaramelFudge(Model model) {
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-12";
     }
 
+    @PostMapping("/singleproduct/karamel-fudge")
+    public String addCaramelFudge(HttpServletRequest request) {
+        Product product=productRepository.getById(12);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-12";
+    }
+
     @GetMapping("/singleproduct/marcipan200g")
-    public String showMarcipan200() {
+    public String showMarcipan200(Model model) {
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-2";
     }
 
+    @PostMapping("/singleproduct/marcipan200g")
+    public String addMarcipan200(HttpServletRequest request) {
+        Product product=productRepository.getById(2);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-2";
+    }
+
     @GetMapping("/singleproduct/marcipan400g")
-    public String showMarcipan400g(){
+    public String showMarcipan400g(Model model) {
+        model.addAttribute("product", new ShoppingCarts());
         return "/single-products/singleProduct-1";
     }
 
+    @PostMapping("/singleproduct/marcipan400g")
+    public String addMarcipan400g(HttpServletRequest request){
+        Product product=productRepository.getById(1);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-1";
+    }
+
     @GetMapping("/singleproduct/marcipan-saltkaramel")
-    public String showMarcipanSaltCaramel(){
+    public String showMarcipanSaltCaramel(Model model) {
+        model.addAttribute("products", new ShoppingCart());
         return "/single-products/singleProduct-3";
     }
 
+    @PostMapping("/singleproduct/marcipan-saltkaramel")
+    public String addMarcipanSaltCaramel(HttpServletRequest request){
+        Product product=productRepository.getById(3);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-3";
+    }
+
     @GetMapping("/singleproduct/marcipan-lakrids")
-    public String showMarcipanLaqrids(){
+    public String showMarcipanLaqrids(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-4";
     }
 
+    @PostMapping("/singleproduct/marcipan-lakrids")
+    public String addMarcipanLaqrids(HttpServletRequest request){
+        Product product=productRepository.getById(4);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-4";
+    }
+
     @GetMapping("/singleproduct/marcipan-kokos")
-    public String showMarcipanCoconut(){
+    public String showMarcipanCoconut(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-5";
     }
 
+    @PostMapping("/singleproduct/marcipan-kokos")
+    public String addMarcipanCoconut(HttpServletRequest request){
+        Product product=productRepository.getById(5);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-5";
+    }
+
     @GetMapping("/singleproduct/rosa-stoev")
-    public String showRosaStoev(){
+    public String showRosaStoev(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-9";
     }
 
+    @PostMapping("/singleproduct/rosa-stoev")
+    public String addRosaStoev(HttpServletRequest request){
+        Product product=productRepository.getById(9);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-9";
+    }
+
     @GetMapping("/singleproduct/nougat")
-    public String showNougat(){
+    public String showNougat(Model model){
+        model.addAttribute("product", new ShoppingCart());
+        return "/single-products/singleProduct-11";
+    }
+
+    @PostMapping("/singleproduct/nougat")
+    public String addNougat(HttpServletRequest request){
+        Product product=productRepository.getById(11);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
         return "/single-products/singleProduct-11";
     }
 
     @GetMapping("/singleproduct/chokolade-spaner")
-    public String showChocolateSpaner(){
+    public String showChocolateSpaner(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-13";
     }
 
+    @PostMapping("/singleproduct/chokolade-spaner")
+    public String addChocolateSpaner(HttpServletRequest request){
+        Product product=productRepository.getById(13);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-13";
+    }
+
     @GetMapping("/singleproduct/lakrids-knas")
-    public String showLaqridsKnas(){
+    public String showLaqridsKnas(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-14";
     }
 
+    @PostMapping("/singleproduct/lakrids-knas")
+    public String addLaqridsKnas(HttpServletRequest request){
+        Product product=productRepository.getById(14);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-14";
+    }
+
     @GetMapping("/singleproduct/ruby-knapper")
-    public String showRubyKnaps(){
+    public String showRubyKnaps(Model model){
+        model.addAttribute("product", new ShoppingCart());
         return "/single-products/singleProduct-15";
+    }
+
+    @PostMapping("/singleproduct/ruby-knapper")
+    public String addRubyKnaps(HttpServletRequest request){
+        Product product=productRepository.getById(15);
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
+        shoppingCart.setProduct(product);
+        shoppingCartRepository.save(shoppingCart);
+        return "redirect:/single-products/singleProduct-15";
     }
 }
