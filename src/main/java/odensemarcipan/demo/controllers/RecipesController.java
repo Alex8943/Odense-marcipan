@@ -26,7 +26,7 @@ public class RecipesController {
         return "/single-recipes/recipes-julegave";
     }
 
-    @GetMapping("/julekugler")
+    @GetMapping("/single-recipes/julekugler")
     public String showJuleKugler(){
         return "/single-recipes/recipes-julekugler";
     }
