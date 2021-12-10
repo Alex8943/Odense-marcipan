@@ -17,7 +17,7 @@ public class ShoppingCarts {
 
     @PostMapping("/single-products/add-to-cart/{id}")
     public String addToShoppingCart(@RequestParam int id, @ModelAttribute ShoppingCart shoppingCart){
-        System.out.println("yeet");
+
         ShoppingCart shoppingcart = new ShoppingCart();
         shoppingcart.setProduct(productRepository.getById(id));
         shoppingCartRepository.save(shoppingCart);
