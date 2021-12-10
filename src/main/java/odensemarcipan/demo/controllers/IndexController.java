@@ -8,6 +8,6 @@ public class IndexController {
 
     @GetMapping("/frontpage")
     public String showIndex(){
-        return "/index.html";
+        return "/index";
     }
 }
