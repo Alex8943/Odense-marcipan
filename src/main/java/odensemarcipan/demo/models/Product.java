@@ -28,6 +28,9 @@ public class Product {
     @Column
     private String category;
 
+    @Column
+    private String picturePath;
+
     @OneToMany(mappedBy = "id", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Product> savedProduct;
