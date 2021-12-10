@@ -186,39 +186,12 @@
           <div class="dropdown-menu dropdown-menu-end">
             <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
               <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
-                <div class="widget-cart-item pb-2 border-bottom">
+                <div class="widget-cart-item pb-2 border-bottom" th:each="product:${product}">
                   <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
                   <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/chokolade-kategori.png" width="64" alt="Product"></a>
                     <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">Chokolade</a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">DKK150.<small>00</small></span><span class="text-muted">x 1</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-cart-item py-2 border-bottom">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/marcipan_kategori.png" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">Marcipan</a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">DKK 79.<small>50</small></span><span class="text-muted">x 1</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-cart-item py-2 border-bottom">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/nougat-kategori.png" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">Nougat </a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">DKK 22.<small>50</small></span><span class="text-muted">x 1</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-cart-item py-2 border-bottom">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/dekorations-kategori.png" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html">dekoration</a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2">Dkk 9.<small>00</small></span><span class="text-muted">x 1</span></div>
+                      <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${product.name}"></a></h6>
+                      <div class="widget-product-meta"><span class="text-accent me-2" th:text="${product.price}"><small>00</small></span><span class="text-muted">x 1</span></div>
                     </div>
                   </div>
                 </div>
@@ -251,13 +224,13 @@
         <a class="btn btn-outline-primary btn-sm ps-2-left" th:href="@{'/frontpage'}"><i class="ci-arrow-left me-2"></i>Forstæt shopping</a>
       </div>
       <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
+      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom" th:each="product:${product}">
 
         <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/chokolade-kategori.png" width="160" alt="Product"></a>
           <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">Chokolade</a></h3>
+            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html" th:text="${product.name}"></a></h3>
 
-            <div class="fs-lg text-accent pt-2">DKK154.<small>00</small></div>
+            <div class="fs-lg text-accent pt-2" th:text="${product.price}"><small>00</small></div>
           </div>
         </div>
         <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">

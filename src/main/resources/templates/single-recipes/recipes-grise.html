@@ -275,6 +275,7 @@
                         <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i></button>
                     </form>
                     <form action="#" th:action=@{'/singleproduct/lakrids-knas'} th:object="${product}" method="post">
+                        <input type="hidden" th:field="*{amount}" th:value="pig">
                         <li><i class="ci-check-circle text-success me-2"></i>ODENSE Lakrids knas/crisp med naturlig farve 75 g</li>
                         <button class="btn btn-primary btn-shadow me-3 mb-3" type="submit"><i class="ci-cart fs-lg me-2"></i></button>
                     </form>

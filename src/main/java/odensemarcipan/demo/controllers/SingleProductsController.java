@@ -285,6 +285,7 @@ public class SingleProductsController {
             shoppingCart.setAmount(Integer.parseInt(request.getParameter("amount")));
         }
         shoppingCart.setProduct(product);
+        System.out.println(request.getParameter("redirect"));
         shoppingCartRepository.save(shoppingCart);
 
         /*switch (request.getParameter("redirect")){

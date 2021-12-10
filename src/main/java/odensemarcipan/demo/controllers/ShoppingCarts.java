@@ -5,6 +5,7 @@ import odensemarcipan.demo.repositories.ProductRepository;
 import odensemarcipan.demo.repositories.ShoppingCartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -26,7 +27,8 @@ public class ShoppingCarts {
     }
 
     @GetMapping("/showshoppincart")
-    public String showShoppingCart(){
+    public String showShoppingCart(Model model){
+        model.addAttribute("product",productRepository.findByIsBought());
         return "/shoplist";
     }
 }

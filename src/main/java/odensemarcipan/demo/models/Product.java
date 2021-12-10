@@ -1,5 +1,6 @@
 package odensemarcipan.demo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,6 +29,7 @@ public class Product {
     private String category;
 
     @OneToMany(mappedBy = "id", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Product> savedProduct;
 
 }

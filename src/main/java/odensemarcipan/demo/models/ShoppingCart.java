@@ -1,15 +1,14 @@
 package odensemarcipan.demo.models;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Data
 @Table(name = "shopping_cart")
 @Entity
-@Getter @Setter
+@Getter @Setter @RequiredArgsConstructor
 public class ShoppingCart {
 
     @Id
@@ -20,14 +19,17 @@ public class ShoppingCart {
     @Column
     private int amount;
 
-    private String redirect;
+    @Column
+    private boolean isBought;
 
     @ManyToOne
     @JoinColumn(name = "productId",nullable = false)
+    @JsonIgnore
     private Product product;
 
     @OneToOne
     @JoinColumn(name = "customerId",nullable = true, referencedColumnName = "id")
+    @JsonIgnore
     private Customer customer;
 
 
