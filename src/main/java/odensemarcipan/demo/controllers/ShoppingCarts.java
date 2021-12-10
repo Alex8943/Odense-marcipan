@@ -24,6 +24,4 @@ public class ShoppingCarts {
 
         return "redirect:/products/singleProducts-"+id;
     }
-
-
 }

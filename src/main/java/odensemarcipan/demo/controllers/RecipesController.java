@@ -29,7 +29,7 @@ public class RecipesController {
         return "/single-recipes/recipes-julegave";
     }
 
-    @GetMapping("/single-recipes/julekugler")
+    @GetMapping("/julekugler")
     public String showJuleKugler(){
         return "/single-recipes/recipes-julekugler";
     }
