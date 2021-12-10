@@ -24,4 +24,9 @@ public class ShoppingCarts {
 
         return "redirect:/products/singleProducts-"+id;
     }
+
+    @GetMapping("/showshoppincart")
+    public String showShoppingCart(){
+        return "/shoplist";
+    }
 }
