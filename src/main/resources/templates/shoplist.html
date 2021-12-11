@@ -240,84 +240,36 @@
         </div>
       </div>
 
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/marcipan_kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">Marcipan </a></h3>
-
-            <div class="fs-lg text-accent pt-2">DKK 79.<small>50</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity2">Quantity</label>
-          <input class="form-control" type="number" id="quantity2" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-
-        </div>
-      </div>
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/nougat-kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">Nougat</a></h3>
-
-            <div class="fs-lg text-accent pt-2">DKK 22.<small>50</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity3">Quantity</label>
-          <input class="form-control" type="number" id="quantity3" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-        </div>
-      </div>
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/dekorations-kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">dekoration</a></h3>
-            <div class="fs-lg text-accent pt-2">DKK 9.<small>00</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity4">Quantity</label>
-          <input class="form-control" type="number" id="quantity4" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-        </div>
-      </div>
-
-
       <div class="pt-2 px-4 pe-lg-0 ps-xl-5">
         <!-- Title-->
         <h2 class="h6 border-bottom pb-3 mb-3">Billing details</h2>
         <!-- Billing detail-->
+        <form action="#" th:action="@{/showshoppincart}" th:object="${customer}" method="post">
         <div class="row pb-4 gx-4 gy-3">
-          <form  method="post">
           <div class="col-sm-6">
             <label class="form-label" for="mc-fn">First name <span class='text-danger'>*</span></label>
-            <input class="form-control" type="text" id="mc-fn">
+            <input class="form-control" th:field="*{name}" name="name" type="text" id="mc-fn">
           </div>
           <div class="col-6">
             <label class="form-label" for="mc-email">Phone <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-phone">
+            <input class="form-control" th:field="*{phoneNumber}" name="phone" type="number" id="mc-phone">
           </div>
           <div class="col-12">
             <label class="form-label" for="mc-email">Email address <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-email">
+            <input class="form-control" th:field="*{email}" name="email" type="email"  id="mc-email">
           </div>
           <div class="col-6">
             <label class="form-label" for="mc-email">Address <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-address">
+            <input class="form-control" type="text" name="address" th:field="*{address}" id="mc-address">
           </div>
           <div class="col-6">
             <label class="form-label" for="mc-email">Zip code<span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-zipcode">
+            <input class="form-control" type="text" th:field="*{zipcode}" name="zipcode"  id="mc-zipcode">
           </div>
         </div>
-      >
-      <button class="btn btn-outline-accent d-block w-100 mt-4" type="button"><i class="ci-loading fs-base me-2"></i>CheckOut</button>>
+      <button class="btn btn-outline-accent d-block w-100 mt-4" type="submit" value="Submit"><i class="ci-loading fs-base me-2"></i>CheckOut</button>>
+        </form>
       </div>
-      </form>
     </section>
   </div>
   </div>

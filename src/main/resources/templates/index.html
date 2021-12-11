@@ -78,7 +78,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -180,32 +179,61 @@
           </div>
 
         </div>
-        <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="/shoplist.html"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text" href="shoplist.html"><small>Min Kurv</small>DKK </a>
+        <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" th:href="@{'/showshoppincart'}"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text" href="shoplist.html"><small>Min Kurv</small>DKK </a>
 
           <!-- Cart dropdown-->
           <div class="dropdown-menu dropdown-menu-end">
             <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
               <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
-                <div class="widget-cart-item pb-2 border-bottom" th:each="product:${product}">
-                  <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img th:src="@{${product.picturePath}}" width="64" alt="Product"></a>
-                    <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${product.name}"></a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2" th:text="${product.price}"><small>00</small></span><span class="text-muted">x 1</span></div>
+                <div class="widget-cart-item pb-2 border-bottom">
+                  <div class="widget-cart-item pb-2 border-bottom" th:each="product:${product}">
+                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/chokolade-kategori.png" width="64" alt="Product"></a>
+                      <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Chokolade</a></h6>
+                        <div class="widget-product-meta"><span class="text-accent me-2">DKK150.<small>00</small></span><span class="text-muted">x 1</span></div>
+                        <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${product.name}"></a></h6>
+                        <div class="widget-product-meta"><span class="text-accent me-2" th:text="${product.price}"><small>00</small></span><span class="text-muted">x 1</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="widget-cart-item py-2 border-bottom">
+                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/marcipan_kategori.png" width="64" alt="Product"></a>
+                      <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Marcipan</a></h6>
+                        <div class="widget-product-meta"><span class="text-accent me-2">DKK 79.<small>50</small></span><span class="text-muted">x 1</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="widget-cart-item py-2 border-bottom">
+                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/nougat-kategori.png" width="64" alt="Product"></a>
+                      <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Nougat </a></h6>
+                        <div class="widget-product-meta"><span class="text-accent me-2">DKK 22.<small>50</small></span><span class="text-muted">x 1</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="widget-cart-item py-2 border-bottom">
+                    <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                    <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/dekorations-kategori.png" width="64" alt="Product"></a>
+                      <div class="ps-2">
+                        <h6 class="widget-product-title"><a href="shop-single-v1.html">dekoration</a></h6>
+                        <div class="widget-product-meta"><span class="text-accent me-2">Dkk 9.<small>00</small></span><span class="text-muted">x 1</span></div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                  <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">DKK265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
+                </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
               </div>
-              <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
-                <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">DKK265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
-              </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-  </div>
 </header>
 <!-- Back To Top Button--><a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ci-arrow-up">   </i></a>
 <!-- Vendor scrits: js libraries and plugins-->
@@ -215,115 +243,111 @@
 <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 <!-- Main theme script-->
 <script src="/js/theme.min.js"></script>
-<div class="container pb-5 mb-2 mb-md-4">
+<!-- Hero section-->
+<!-- Categories (cuisine) grid-->
+<section class="container py-4 my-lg-3 py-sm-5" id="kategorier">
+  <h2 class="text-center pt-4 pt-sm-3">Kategorier</h2>
   <div class="row">
-    <!-- List of items-->
-    <section class="col-lg-8">
-      <div class="d-flex justify-content-between align-items-center pt-3 pb-4 pb-sm-5 mt-1">
-        <h2 class="h6 text-light mb-0">Produkt oversigt</h2>
-        <a class="btn btn-outline-primary btn-sm ps-2-left" th:href="@{'/frontpage'}"><i class="ci-arrow-left me-2"></i>Forstæt shopping</a>
-      </div>
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom" th:each="product:${product}">
-
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img th:src="@{${product.picturePath}}" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html" th:text="${product.name}"></a></h3>
-
-            <div class="fs-lg text-accent pt-2" th:text="${product.price}"><small>00</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity1">Quantity</label>
-          <input class="form-control" type="number" id="quantity1" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-        </div>
-      </div>
-
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/marcipan_kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">Marcipan </a></h3>
-
-            <div class="fs-lg text-accent pt-2">DKK 79.<small>50</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity2">Quantity</label>
-          <input class="form-control" type="number" id="quantity2" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-
-        </div>
-      </div>
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/nougat-kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">Nougat</a></h3>
-
-            <div class="fs-lg text-accent pt-2">DKK 22.<small>50</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity3">Quantity</label>
-          <input class="form-control" type="number" id="quantity3" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-        </div>
-      </div>
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/dekorations-kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">dekoration</a></h3>
-            <div class="fs-lg text-accent pt-2">DKK 9.<small>00</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity4">Quantity</label>
-          <input class="form-control" type="number" id="quantity4" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-        </div>
-      </div>
-
-
-      <div class="pt-2 px-4 pe-lg-0 ps-xl-5">
-        <!-- Title-->
-        <h2 class="h6 border-bottom pb-3 mb-3">Billing details</h2>
-        <!-- Billing detail-->
-        <div class="row pb-4 gx-4 gy-3">
-          <div class="col-sm-6">
-            <label class="form-label" for="mc-fn">First name <span class='text-danger'>*</span></label>
-            <input class="form-control" type="text" id="mc-fn">
-          </div>
-          <div class="col-6">
-            <label class="form-label" for="mc-email">Phone <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-phone">
-          </div>
-          <div class="col-12">
-            <label class="form-label" for="mc-email">Email address <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-email">
-          </div>
-          <div class="col-6">
-            <label class="form-label" for="mc-email">Address <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-address">
-          </div>
-          <div class="col-6">
-            <label class="form-label" for="mc-email">Zip code<span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-zipcode">
-          </div>
-        </div>
-
-        <button class="btn btn-outline-accent d-block w-100 mt-4" type="button"><i class="ci-loading fs-base me-2"></i>CheckOut</button>
-    </section>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/products/marcipan'}"><img class="card-img-top" src="/odense-images/Forside/marcipan_kategori.png" alt="Marcipan">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Marcipan</h3>
+        <div class="product-price"><span class="text-accent"><small></small></span></div>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/products/nougat'}"><img class="card-img-top" src="/odense-images/Forside/nougat-kategori.png" alt="Nougat">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Nougat</h3>
+        <div class="product-price"><span class="text-accent"><small></small></span></div>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/products/chocolate'}"><img class="card-img-top" src="/odense-images/Forside/chokolade-kategori.png" alt="Chokolade">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Chokolade</h3>
+        <div class="product-price"><span class="text-accent"><small></small></span></div>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/products/decoration'}"><img class="card-img-top" src="/odense-images/Forside/dekorations-kategori.png" alt="Dekoration">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Dekoration</h3>
+        <div class="product-price"><span class="text-accent"><small></small></span></div>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/recipes/overview'}"><img class="card-img-top" src="/odense-images/Opskrifter/kransekage-op.png" alt="Coffee &amp; Desserts">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Opskrifter</h3>
+        <div class="product-price"><span class="text-accent"><small></small></span></div>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" href="food-delivery-category.html"><img class="card-img-top" src="/odense-images/Opskrifter/julekugler.png" alt="Healthy &amp; Food">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Lorem Ipsum</h3>
+        <div class="product-price"><span class="text-accent"><small></small></span></div>
+      </div></a></div>
   </div>
-</div>
+</section>
+<!-- Jule Hygge-->
+<section class="container py-4 my-lg-3 py-sm-5" id="kategorier">
+  <h2 class="text-center pt-4 pt-sm-3">Jule Hygge</h2>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/julegave'}"><img class="card-img-top" src="/odense-images/Opskrifter/gaver.png" alt="Julegaver">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Julegaver</h3>
 
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/sinlge-recipes/julekugler'}"><img class="card-img-top" src="/odense-images/Opskrifter/julekugler.png" alt="Nougat">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Julekugler</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/julesmaekager'}"><img class="card-img-top" src="/odense-images/Opskrifter/julens-kager.png" alt="Jule Kager">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Julesmåkager med marcipan</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/kransekage'}"><img class="card-img-top" src="/odense-images/Opskrifter/kransekage-op.png" alt="Kransekage">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Kransekage med marcipan</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/grise'}"><img class="card-img-top" src="/odense-images/Opskrifter/marcipan-grise.png" alt="Julegrise">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Marcipan grise</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/hasselnoedder'}"><img class="card-img-top" src="/odense-images/Opskrifter/nougat-kage.png" alt="Healthy &amp; Food">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Småkager med nougat og hasselnødder</h3>
+      </div></a></div>
+  </div>
+</section>
+<!-- Nyheder-->
+<section class="container py-4 my-lg-3 py-sm-5" id="kategorier">
+  <h2 class="text-center pt-4 pt-sm-3">Nyheder</h2>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/singleproduct/chokolade-milk200g'}"><img class="card-img-top" src="/odense-images/Produkter/maelke-chokolade-200g.png" alt="Mælkechokolade">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Mælkechokolade</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/singleproduct/rosa-stoev'}"><img class="card-img-top" src="/odense-images/Produkter/rosa-stoev.png" alt="rosa-støv">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Rosa støv</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/singleproduct/marcipan-saltkaramel'}"><img class="card-img-top" src="/odense-images/Produkter/marcipan-saltkaramel150g.png" alt="salt-karamel">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Marcipan med saltkaramel</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/singleproduct/ruby-knapper'}"><img class="card-img-top" src="/odense-images/Produkter/ruby-knapper.png" alt="Ruby-knapper">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Ruby knapper</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/singleproduct/lakrids-knas'}"><img class="card-img-top" src="/odense-images/Produkter/larids-knas.png" alt="Lakrids-knas">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Lakrids knas</h3>
+      </div></a></div>
+    <div class="col-md-4 col-sm-6 mb-grid-gutter"><a class="card border-0 shadow" th:href="@{'/singleproduct/chokolade-spaner'}"><img class="card-img-top" src="/odense-images/Produkter/spaner-mork-chokolade.png" alt="Spåner-mørk-chokolade">
+      <div class="card-body py-4 text-center">
+        <h3 class="h5 mt-1">Spåner af mørk choloade</h3>
+      </div></a></div>
+  </div>
+</section>
+</main>
+<!-- Footer-->
 <footer class="footer bg-darker pt-5">
   <div class="container pt-2">
     <div class="row pb-2">
       <div class="col-lg-2 col-sm-4 pb-2 mb-4">
-
+        <div class="mt-n1"><a class="d-inline-block align-middle" href="#"><img class="d-block mb-4" src="/images/logo.png" width="117" alt="Cartzilla"></a></div>
         <div class="btn-group dropdown disable-autohide">
         </div>
       </div>
@@ -361,7 +385,7 @@
   </div>
   <hr class="hr-light mt-md-2 mb-3">
 </footer>
-
+<!-- Toolbar for handheld devices (Food delivery)-->
 <div class="handheld-toolbar">
   <div class="d-table table-layout-fixed w-100"><a class="d-table-cell handheld-toolbar-item" href="#signin-modal" data-bs-toggle="modal"><span class="handheld-toolbar-icon"><i class="ci-user"></i></span><span class="handheld-toolbar-label">Account</span></a><a class="d-table-cell handheld-toolbar-item" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" onclick="window.scrollTo(0, 0)"><span class="handheld-toolbar-icon"><i class="ci-menu"></i></span><span class="handheld-toolbar-label">Menu</span></a><a class="d-table-cell handheld-toolbar-item" href="food-delivery-cart.html"><span class="handheld-toolbar-icon"><i class="ci-cart"></i><span class="badge bg-primary rounded-pill ms-1">3</span></span><span class="handheld-toolbar-label">$24.00</span></a></div>
 </div>
@@ -373,6 +397,5 @@
 <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 <!-- Main theme script-->
 <script src="/js/theme.min.js"></script>
-
 </body>
-</html>
+</html>>

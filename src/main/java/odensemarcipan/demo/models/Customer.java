@@ -13,6 +13,7 @@ import javax.persistence.*;
 public class Customer {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
 
     @Column

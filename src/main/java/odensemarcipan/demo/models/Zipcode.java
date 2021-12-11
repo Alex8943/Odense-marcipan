@@ -14,10 +14,14 @@ import java.util.List;
 public class Zipcode {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
 
     @Column
     private int zipcode;
+
+    @Column
+    private String cityName;
 
     @OneToMany(mappedBy = "zipcode",fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
     private List<Zipcode> savedZipcode;
