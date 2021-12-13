@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Table(name = "customers")
@@ -32,7 +33,7 @@ public class Customer {
     @JoinColumn(name = "zipcode", nullable = false)
     private Zipcode zipcode;
 
-    @OneToOne(mappedBy = "customer",fetch = FetchType.LAZY)
-    private ShoppingCart shoppingCart;
+    @OneToMany(mappedBy = "id", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Product> savedProduct;
 
 }

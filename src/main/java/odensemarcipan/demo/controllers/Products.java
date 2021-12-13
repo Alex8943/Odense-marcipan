@@ -1,6 +1,5 @@
 package odensemarcipan.demo.controllers;
 
-import jdk.internal.access.JavaNetHttpCookieAccess;
 import odensemarcipan.demo.models.Product;
 import odensemarcipan.demo.models.ShoppingCart;
 import odensemarcipan.demo.repositories.ProductRepository;

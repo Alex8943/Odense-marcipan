@@ -27,8 +27,8 @@ public class ShoppingCart {
     @JsonIgnore
     private Product product;
 
-    @OneToOne
-    @JoinColumn(name = "customerId",nullable = true, referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "customerId")
     @JsonIgnore
     private Customer customer;
 
