@@ -31,6 +31,7 @@ public class ShoppingCarts {
     public String showShoppingCart(Model model){
         model.addAttribute("product",productRepository.findByIsBought());
         model.addAttribute("customer",new Customer());
+        model.addAttribute("totalPrice",productRepository.findSumByIsBoughtIsFalse());
         return "/shoplist";
     }
 

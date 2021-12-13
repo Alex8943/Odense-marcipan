@@ -31,6 +31,9 @@ public class Product {
     @Column
     private String picturePath;
 
+    @Transient
+    private int totalPrice;
+
     @OneToMany(mappedBy = "id", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Product> savedProduct;
