@@ -36,4 +36,7 @@ public class Customer {
     @OneToMany(mappedBy = "id", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Product> savedProduct;
 
+    @Transient
+    private int autoIncrement;
+
 }

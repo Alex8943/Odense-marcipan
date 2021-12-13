@@ -13,5 +13,10 @@ public interface ShoppingCartRepository extends JpaRepository<ShoppingCart,Integ
     @Modifying
     @Transactional
     @Query(value = "UPDATE shopping_cart SET is_bought = TRUE WHERE is_bought IS FALSE", nativeQuery = true)
-    void setIsBoughtFalse();
+    void setIsBoughtToTrue();
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE shopping_cart SET customer_id = ? WHERE is_bought is false", nativeQuery = true)
+    void setCustomerId(int id);
 }

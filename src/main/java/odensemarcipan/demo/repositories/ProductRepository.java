@@ -13,5 +13,6 @@ public interface ProductRepository extends JpaRepository<Product,Integer> {
     List<Product> findByIsBought();
 
     @Query(value = "SELECT SUM(products.price) FROM products INNER JOIN shopping_cart ON products.id = shopping_cart.product_id WHERE shopping_cart.is_bought IS FALSE", nativeQuery = true)
-    int findSumByIsBoughtIsFalse();
+    Integer findSumByIsBoughtIsFalse();
+
 }

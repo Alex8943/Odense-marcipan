@@ -1,19 +1,15 @@
 package odensemarcipan.demo.controllers;
 
-import odensemarcipan.demo.models.Customer;
-import odensemarcipan.demo.models.Product;
-import odensemarcipan.demo.models.ShoppingCart;
-import odensemarcipan.demo.models.Zipcode;
-import odensemarcipan.demo.repositories.CustomerRepository;
-import odensemarcipan.demo.repositories.ProductRepository;
-import odensemarcipan.demo.repositories.ShoppingCartRepository;
-import odensemarcipan.demo.repositories.ZipcodeRepository;
+import odensemarcipan.demo.models.*;
+import odensemarcipan.demo.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class ShoppingCarts {
@@ -26,12 +22,17 @@ public class ShoppingCarts {
     CustomerRepository customerRepository;
     @Autowired
     ZipcodeRepository zipcodeRepository;
+    @Autowired
+    BoughtProductRepository boughtProductRepository;
+
 
     @GetMapping("/showshoppincart")
     public String showShoppingCart(Model model){
         model.addAttribute("product",productRepository.findByIsBought());
         model.addAttribute("customer",new Customer());
-        model.addAttribute("totalPrice",productRepository.findSumByIsBoughtIsFalse());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/shoplist";
     }
 
@@ -43,9 +44,11 @@ public class ShoppingCarts {
         customer.setZipcode(zipcodeRepository.findByZipcode(httpServletRequest.getParameter("zipcode")));
         customer.setPhoneNumber(Integer.parseInt(httpServletRequest.getParameter("phoneNumber")));
         customer.setEmail(httpServletRequest.getParameter("email"));
-        customer.setId(0);
-        shoppingCartRepository.setIsBoughtFalse();
+        customer.setId(customerRepository.findMaxId()+1);
         customerRepository.save(customer);
+        shoppingCartRepository.setCustomerId(customerRepository.findMaxId());
+        shoppingCartRepository.setIsBoughtToTrue();
+
         return"redirect:/frontpage";
     }
 }

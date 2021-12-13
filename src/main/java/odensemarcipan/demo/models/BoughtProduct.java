@@ -22,4 +22,9 @@ public class BoughtProduct {
     @JoinColumn(name = "productId",nullable = false)
     @JsonIgnore
     private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "customerId",nullable = false)
+    @JsonIgnore
+    private Customer customer;
 }
