@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <title>Odense Marcipan</title>
@@ -22,10 +22,6 @@
   <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css"/>
   <!-- Main Theme Styles + Bootstrap--->
   <link rel="stylesheet" media="screen" href="/styles/theme.min.css">
-
-
-
-
 </head>
 <!-- Body-->
 <body class="handheld-toolbar-enabled">
@@ -63,10 +59,8 @@
     </div>
   </div>
   </div>
-
   <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
   <div class="navbar-sticky bg-light">
-
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" th:href="@{'/frontpage'}"><img src="/img/logoO.png" width="142" alt="Cartzilla"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index.html"><img src="/img/logo-icon.png" width="74" alt="Cartzilla"></a>
         <div class="input-group d-none d-lg-flex mx-4">
@@ -194,7 +188,7 @@
               <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
                 <div class="widget-cart-item pb-2 border-bottom" th:each="product:${product}">
                   <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="/odense-images/Forside/chokolade-kategori.png" width="64" alt="Product"></a>
+                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img th:src="@{${product.picturePath}}" width="64" alt="Product"></a>
                     <div class="ps-2">
                       <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${product.name}"></a></h6>
                       <div class="widget-product-meta"><span class="text-accent me-2" th:text="${product.price}"><small>00</small></span><span class="text-muted">x 1</span></div>
@@ -221,11 +215,10 @@
     <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <!-- Main theme script-->
     <script src="/js/theme.min.js"></script>
-
 <div class="container pb-5 mb-2 mb-md-4">
   <div class="row">
     <!-- List of items-->
-    <input class="col-lg-8">
+    <section class="col-lg-8">
       <div class="d-flex justify-content-between align-items-center pt-3 pb-4 pb-sm-5 mt-1">
         <h2 class="h6 text-light mb-0">Produkt oversigt</h2>
         <a class="btn btn-outline-primary btn-sm ps-2-left" th:href="@{'/frontpage'}"><i class="ci-arrow-left me-2"></i>Forstæt shopping</a>
@@ -233,7 +226,7 @@
       <!-- Item-->
       <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom" th:each="product:${product}">
 
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/chokolade-kategori.png" width="160" alt="Product"></a>
+        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img th:src="@{${product.picturePath}}" width="160" alt="Product"></a>
           <div class="pt-2">
             <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html" th:text="${product.name}"></a></h3>
 
@@ -247,159 +240,82 @@
         </div>
       </div>
 
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/marcipan_kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">Marcipan </a></h3>
-
-            <div class="fs-lg text-accent pt-2">DKK 79.<small>50</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity2">Quantity</label>
-          <input class="form-control" type="number" id="quantity2" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-
-        </div>
-      </div>
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/nougat-kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">Nougat</a></h3>
-
-            <div class="fs-lg text-accent pt-2">DKK 22.<small>50</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity3">Quantity</label>
-          <input class="form-control" type="number" id="quantity3" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-        </div>
-      </div>
-      <!-- Item-->
-      <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-        <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img src="/odense-images/Forside/dekorations-kategori.png" width="160" alt="Product"></a>
-          <div class="pt-2">
-            <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html">dekoration</a></h3>
-            <div class="fs-lg text-accent pt-2">DKK 9.<small>00</small></div>
-          </div>
-        </div>
-        <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-          <label class="form-label" for="quantity4">Quantity</label>
-          <input class="form-control" type="number" id="quantity4" min="1" value="1">
-          <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-        </div>
-      </div>
-
-
-    <h2 class="h6 border-bottom pb-3 mb-3"> Totale beløb:
-      <p id="ourCount"></p>
-
-    </h2>
-
-    <script th:inline="javascript">let list = [[${productList}]];</script>
-    <script>
-      function myfun(){
-        var obj = new java.type("java.util");
-        let ourCount = 0;
-
-        for(var i = 0; i < list.length; i++){
-          ourCount +=
-        }
-
-        document.getElementById("ourCount").innerText = ourCount
-        console.log(ourCount)
-        return ourCount;
-
-
-      }
-      myfun();
-    </script>
-
-
-
-
-
-
-
-
-    <div class="pt-2 px-4 pe-lg-0 ps-xl-5">
+      <div class="pt-2 px-4 pe-lg-0 ps-xl-5">
         <!-- Title-->
-        <h2 class="h6 border-bottom pb-3 mb-3">Leverings adresse:</h2>
+        <h2 class="h6 border-bottom pb-3 mb-3">Billing details</h2>
         <!-- Billing detail-->
+        <form action="#" th:action="@{/showshoppincart}" th:object="${customer}" method="post">
         <div class="row pb-4 gx-4 gy-3">
           <div class="col-sm-6">
             <label class="form-label" for="mc-fn">First name <span class='text-danger'>*</span></label>
-            <input class="form-control" type="text" id="mc-fn">
+            <input class="form-control" th:field="*{name}" name="name" type="text" id="mc-fn">
           </div>
           <div class="col-6">
             <label class="form-label" for="mc-email">Phone <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-phone">
+            <input class="form-control" th:field="*{phoneNumber}" name="phone" type="number" id="mc-phone">
           </div>
           <div class="col-12">
             <label class="form-label" for="mc-email">Email address <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-email">
+            <input class="form-control" th:field="*{email}" name="email" type="email"  id="mc-email">
           </div>
           <div class="col-6">
             <label class="form-label" for="mc-email">Address <span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-address">
+            <input class="form-control" type="text" name="address" th:field="*{address}" id="mc-address">
           </div>
           <div class="col-6">
             <label class="form-label" for="mc-email">Zip code<span class='text-danger'>*</span></label>
-            <input class="form-control" type="email"  id="mc-zipcode">
+            <input class="form-control" type="text" th:field="*{zipcode}" name="zipcode"  id="mc-zipcode">
           </div>
         </div>
-      <button class="btn btn-outline-accent d-block w-100 mt-4" type="button"><i class="ci-loading fs-base me-2"></i>CheckOut</button>
+      <button class="btn btn-outline-accent d-block w-100 mt-4" type="submit" value="Submit"><i class="ci-loading fs-base me-2"></i>CheckOut</button>>
+        </form>
+      </div>
+    </section>
   </div>
   </div>
 
-  </section>
+<footer class="footer bg-darker pt-5">
+  <div class="container pt-2">
+    <div class="row pb-2">
+      <div class="col-lg-2 col-sm-4 pb-2 mb-4">
 
-    <!-- Footer-->
-    <footer class="footer bg-darker pt-5">
-      <div class="container pt-2">
-        <div class="row pb-2">
-          <div class="col-lg-2 col-sm-4 pb-2 mb-4">
-            <div class="mt-n1"><a class="d-inline-block align-middle" href="#"><img class="d-block mb-4" src="/images/logo.png" width="117" alt="Cartzilla"></a></div>
-            <div class="btn-group dropdown disable-autohide">
-            </div>
-          </div>
-          <div class="col-lg-2 col-sm-4">
-            <div class="widget widget-links widget-light pb-2 mb-4">
-              <h3 class="widget-title text-light">Arbejd med os</h3>
-              <ul class="widget-list">
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Karriere</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Lorem Ipsum</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Lorem Ipsum</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Om os</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2 col-sm-4">
-            <div class="widget widget-links widget-light pb-2 mb-4">
-              <h3 class="widget-title text-light">Brug for hjælp?</h3>
-              <ul class="widget-list">
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Kontakt os</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Ofte stillede spørgsmål</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2 col-sm-4">
-            <div class="widget widget-links widget-light pb-2 mb-4">
-              <h3 class="widget-title text-light">Følg med</h3>
-              <ul class="widget-list">
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Facebook</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Twitter</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Instagram</a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="btn-group dropdown disable-autohide">
         </div>
       </div>
+      <div class="col-lg-2 col-sm-4">
+        <div class="widget widget-links widget-light pb-2 mb-4">
+          <h3 class="widget-title text-light">Arbejd med os</h3>
+          <ul class="widget-list">
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Karriere</a></li>
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Lorem Ipsum</a></li>
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Lorem Ipsum</a></li>
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Om os</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <div class="widget widget-links widget-light pb-2 mb-4">
+          <h3 class="widget-title text-light">Brug for hjælp?</h3>
+          <ul class="widget-list">
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Kontakt os</a></li>
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Ofte stillede spørgsmål</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <div class="widget widget-links widget-light pb-2 mb-4">
+          <h3 class="widget-title text-light">Følg med</h3>
+          <ul class="widget-list">
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Facebook</a></li>
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Twitter</a></li>
+            <li class="widget-list-item"><a class="widget-list-link" href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      </div>
       <hr class="hr-light mt-md-2 mb-3">
-    </footer>
+</footer>
 
 <div class="handheld-toolbar">
   <div class="d-table table-layout-fixed w-100"><a class="d-table-cell handheld-toolbar-item" href="#signin-modal" data-bs-toggle="modal"><span class="handheld-toolbar-icon"><i class="ci-user"></i></span><span class="handheld-toolbar-label">Account</span></a><a class="d-table-cell handheld-toolbar-item" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" onclick="window.scrollTo(0, 0)"><span class="handheld-toolbar-icon"><i class="ci-menu"></i></span><span class="handheld-toolbar-label">Menu</span></a><a class="d-table-cell handheld-toolbar-item" href="food-delivery-cart.html"><span class="handheld-toolbar-icon"><i class="ci-cart"></i><span class="badge bg-primary rounded-pill ms-1">3</span></span><span class="handheld-toolbar-label">$24.00</span></a></div>
@@ -412,10 +328,6 @@
 <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 <!-- Main theme script-->
 <script src="/js/theme.min.js"></script>
-
-
-
-  <script src="myfun.js" type="text/javascript"></script>
 
 </body>
 </html>
