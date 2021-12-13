@@ -18,7 +18,6 @@ public class ShoppingCarts {
 
     @PostMapping("/single-products/add-to-cart/{id}")
     public String addToShoppingCart(@RequestParam int id, @ModelAttribute ShoppingCart shoppingCart){
-
         ShoppingCart shoppingcart = new ShoppingCart();
         shoppingcart.setProduct(productRepository.getById(id));
         shoppingCartRepository.save(shoppingCart);
@@ -29,6 +28,9 @@ public class ShoppingCarts {
     @GetMapping("/showshoppincart")
     public String showShoppingCart(Model model){
         model.addAttribute("product",productRepository.findByIsBought());
+       // model.addAttribute("productList", productRepository.findBy());
         return "/shoplist";
     }
+
+
 }
