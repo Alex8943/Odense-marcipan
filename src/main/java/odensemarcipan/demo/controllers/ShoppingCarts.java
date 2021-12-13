@@ -22,8 +22,6 @@ public class ShoppingCarts {
     CustomerRepository customerRepository;
     @Autowired
     ZipcodeRepository zipcodeRepository;
-    @Autowired
-    BoughtProductRepository boughtProductRepository;
 
 
     @GetMapping("/showshoppincart")
