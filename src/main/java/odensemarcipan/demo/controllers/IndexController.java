@@ -21,7 +21,7 @@ public class IndexController {
 
     @GetMapping("/frontpage")
     public String showIndex(Model model){
-        model.addAttribute("product", productRepository.findByIsBought());
+        model.addAttribute("products", productRepository.findByIsBought());
         if(productRepository.findSumByIsBoughtIsFalse()!=null) {
             model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
         }

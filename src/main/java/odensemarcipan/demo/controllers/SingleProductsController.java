@@ -22,6 +22,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/bagemarcipan")
     public String showBageMarcipan(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-16";
     }
 
@@ -40,6 +44,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/bronze-stoev")
     public String showBronzeStoev(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-8";
     }
 
@@ -58,6 +66,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/chokolade-dark200g")
     public String showChocolateDark(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-7";
     }
 
@@ -76,6 +88,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/chokolade-milk200g")
     public String showChocolateMilk(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-6";
     }
 
@@ -94,6 +110,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/guld-stoev")
     public String showGuldStoev(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-10";
     }
 
@@ -112,6 +132,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/karamel-fudge")
     public String showCaramelFudge(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-12";
     }
 
@@ -130,6 +154,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/marcipan200g")
     public String showMarcipan200(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-2";
     }
 
@@ -148,6 +176,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/marcipan400g")
     public String showMarcipan400g(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-1";
     }
 
@@ -166,6 +198,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/marcipan-saltkaramel")
     public String showMarcipanSaltCaramel(Model model) {
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-3";
     }
 
@@ -184,6 +220,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/marcipan-lakrids")
     public String showMarcipanLaqrids(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-4";
     }
 
@@ -202,6 +242,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/marcipan-kokos")
     public String showMarcipanCoconut(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-5";
     }
 
@@ -220,6 +264,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/rosa-stoev")
     public String showRosaStoev(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-9";
     }
 
@@ -238,6 +286,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/nougat")
     public String showNougat(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-11";
     }
 
@@ -256,6 +308,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/chokolade-spaner")
     public String showChocolateSpaner(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-13";
     }
 
@@ -274,6 +330,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/lakrids-knas")
     public String showLakridsKnas(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-14";
     }
 
@@ -300,6 +360,10 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/ruby-knapper")
     public String showRubyKnaps(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-15";
     }
 
@@ -318,6 +382,11 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/figur-marcipan")
     public String showFigurMarcipan(Model model){
         model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("product", new ShoppingCart());
+        model.addAttribute("products", productRepository.findByIsBought());
+        if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+            model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+        }
         return "/single-products/singleProduct-17";
     }
     @PostMapping("/singleproduct/figur-marcipan")

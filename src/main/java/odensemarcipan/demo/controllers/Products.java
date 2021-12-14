@@ -39,12 +39,20 @@ public class Products{
    }
 
    @GetMapping("/products/marcipan")
-   public String marcipanOverview(){
+   public String marcipanOverview(Model model){
+       model.addAttribute("product", productRepository.findByIsBought());
+       if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+           model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+       }
        return "/product-overview/marcipan-products";
    }
 
    @GetMapping("/products/nougat")
-   public String nougatOverview(){
+   public String nougatOverview(Model model){
+       model.addAttribute("product", productRepository.findByIsBought());
+       if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+           model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+       }
        return "/product-overview/nougat-products";
    }
 

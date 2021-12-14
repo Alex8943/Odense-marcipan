@@ -26,7 +26,7 @@ public class ShoppingCarts {
 
     @GetMapping("/showshoppincart")
     public String showShoppingCart(Model model){
-        model.addAttribute("product",productRepository.findByIsBought());
+        model.addAttribute("products",productRepository.findByIsBought());
         model.addAttribute("customer",new Customer());
         if(productRepository.findSumByIsBoughtIsFalse()!=null) {
             model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
