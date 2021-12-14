@@ -17,9 +17,6 @@ public class ShoppingCart {
     private int id;
 
     @Column
-    private int amount;
-
-    @Column
     private boolean isBought;
 
     @ManyToOne
