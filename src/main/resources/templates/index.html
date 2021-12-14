@@ -172,12 +172,12 @@
           <div class="dropdown-menu dropdown-menu-end">
             <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
               <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
-                <div class="widget-cart-item pb-2 border-bottom" th:each="product:${product}">
+                <div class="widget-cart-item pb-2 border-bottom" th:each="products:${products}">
                   <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img th:src="@{${product.picturePath}}" width="64" alt="Product"></a>
+                  <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img th:src="@{${products.picturePath}}" width="64" alt="Product"></a>
                     <div class="ps-2">
-                      <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${product.name}"></a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2" th:text="${product.price}"><small>00</small></span><span class="text-muted">x 1</span></div>
+                      <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${products.name}"></a></h6>
+                      <div class="widget-product-meta"><span class="text-accent me-2" th:text="${products.price}"><small>00</small></span><span class="text-muted">x 1</span></div>
                     </div>
                   </div>
                 </div>
