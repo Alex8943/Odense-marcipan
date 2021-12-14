@@ -21,12 +21,20 @@ public class Products{
 
 
    @GetMapping("/products/chocolate")
-   public String chocolateOverview(){
+   public String chocolateOverview(Model model){
+       if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+           model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+       }
        return "/product-overview/chocolat-products";
+
    }
 
        @GetMapping("/products/decoration")
-   public String decorationOverview(){
+   public String decorationOverview(Model model){
+           model.addAttribute("product", productRepository.findByIsBought());
+           if(productRepository.findSumByIsBoughtIsFalse()!=null) {
+               model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
+           }
        return "/product-overview/decoration-products";
    }
 
