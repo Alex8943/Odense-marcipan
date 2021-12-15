@@ -34,7 +34,7 @@ public class Product {
     @Transient
     private int totalPrice;
 
-    @Transient
+    @Column
     private int amount;
 
     @OneToMany(mappedBy = "id", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
