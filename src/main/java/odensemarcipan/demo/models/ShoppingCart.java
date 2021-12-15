@@ -19,6 +19,9 @@ public class ShoppingCart {
     @Column
     private boolean isBought;
 
+    @Column
+    private int amount;
+
     @ManyToOne
     @JoinColumn(name = "productId",nullable = false)
     @JsonIgnore
