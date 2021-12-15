@@ -35,7 +35,7 @@ public class ShoppingCarts {
     }
 
     @PostMapping("/showshoppincart")
-    public String showShoppingCart(HttpServletRequest httpServletRequest){
+    public String processShoppingCart(HttpServletRequest httpServletRequest){
         Customer customer = new Customer();
         customer.setName(httpServletRequest.getParameter("name"));
         customer.setAddress(httpServletRequest.getParameter("address"));

@@ -17,10 +17,10 @@ public class ShoppingCart {
     private int id;
 
     @Column
-    private int amount;
+    private boolean isBought;
 
     @Column
-    private boolean isBought;
+    private int amount;
 
     @ManyToOne
     @JoinColumn(name = "productId",nullable = false)
