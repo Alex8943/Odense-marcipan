@@ -179,7 +179,7 @@
                   <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img th:src="@{${products.picturePath}}" width="64" alt="Product"></a>
                     <div class="ps-2">
                       <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${products.name}"></a></h6>
-                      <div class="widget-product-meta"><span class="text-accent me-2" th:text="${products.price}"><small>00</small></span><span class="text-muted">x 1</span></div>
+                      <div class="widget-product-meta"><span class="text-accent me-2" th:text="${products.price} + ' dkk'"><small>00</small></span>x<span class="text-muted" th:text="${products.amount}"></span></div>
                     </div>
                   </div>
                 </div>
@@ -216,10 +216,10 @@
         <div class="d-block d-sm-flex align-items-center text-center text-sm-start"><a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="shop-single-v1.html"><img th:src="@{${products.picturePath}}" width="160" alt="Product"></a>
           <div class="pt-2">
             <h3 class="product-title fs-base mb-2"><a href="shop-single-v1.html" th:text="${products.name}"></a></h3>
-            <div class="fs-lg text-accent pt-2" th:text="${products.price}"><small>00</small></div>
-            <div class="fs-lg text-accent pt-2" th:text="${products.amount}"><small></small></div>
+            <div class="fs-lg text-accent pt-2" th:text="${products.price} * ${products.amount} + ' dkk'"><small>00</small></div>
+            <div class="fs-lg text-accent pt-2" th:text="x + ${products.amount}"></div>
             <a th:href="@{'/deleteproductShoplist/'+${products.id}}">
-            <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
+              <button class="btn btn-link px-0 text-danger" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
             </a>
           </div>
         </div>
