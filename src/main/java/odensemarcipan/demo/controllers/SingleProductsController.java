@@ -382,7 +382,6 @@ public class SingleProductsController {
     @GetMapping("/singleproduct/figur-marcipan")
     public String showFigurMarcipan(Model model){
         model.addAttribute("product", new ShoppingCart());
-        model.addAttribute("product", new ShoppingCart());
         model.addAttribute("products", productRepository.findByIsBought());
         if(productRepository.findSumByIsBoughtIsFalse()!=null) {
             model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
