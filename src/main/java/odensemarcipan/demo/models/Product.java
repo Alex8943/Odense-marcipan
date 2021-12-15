@@ -34,6 +34,9 @@ public class Product {
     @Transient
     private int totalPrice;
 
+    @Transient
+    private int amount;
+
     @OneToMany(mappedBy = "id", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Product> savedProduct;

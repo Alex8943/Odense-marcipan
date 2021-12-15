@@ -51,7 +51,7 @@
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" th:href="@{'/frontpage'}"><img src="/img/logoO.png" width="142" alt="Cartzilla"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index.html"><img src="/img/logo-icon.png" width="74" alt="Cartzilla"></a>
         <div class="input-group d-none d-lg-flex mx-4">
-          <input class="form-control rounded-end pe-5" type="text" placeholder="Søg efter produkter"><i class="ci-search position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3"></i>
+          <input id= "search" class="form-control rounded-end pe-5" type="text" placeholder="Søg efter produkter"><i class="ci-search position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3"></i>
         </div>
         <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-tool navbar-stuck-toggler" href="#"><span class="navbar-tool-tooltip">Expand menu</span>
@@ -173,7 +173,9 @@
             <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
               <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
                 <div class="widget-cart-item pb-2 border-bottom" th:each="products:${products}">
+                  <a th:href="@{'/deleteproduct/'+${products.id}}">
                   <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                  </a>
                   <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img th:src="@{${products.picturePath}}" width="64" alt="Product"></a>
                     <div class="ps-2">
                       <h6 class="widget-product-title"><a href="shop-single-v1.html" th:text="${products.name}"></a></h6>

@@ -34,6 +34,21 @@ public class ShoppingCarts {
         return "/shoplist";
     }
 
+    @GetMapping("/deleteproduct/{id}")
+    public String deleteBoughtShopping(@PathVariable int id){
+        shoppingCartRepository.deleteProductIsBought(id);
+        return "redirect:/frontpage";
+    }
+
+
+    @GetMapping("/deleteproductShoplist/{id}")
+    public String deleteBoughtShoppingFromShoplist(@PathVariable int id){
+        shoppingCartRepository.deleteProductIsBought(id);
+        return "redirect:/showshoppincart";
+    }
+
+
+
     @PostMapping("/showshoppincart")
     public String processShoppingCart(HttpServletRequest httpServletRequest){
         Customer customer = new Customer();
