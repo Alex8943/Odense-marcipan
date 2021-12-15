@@ -31,6 +31,10 @@ public class ShoppingCarts {
         if(productRepository.findSumByIsBoughtIsFalse()!=null) {
             model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
         }
+        if(productRepository.findByIsBought()!=null){
+            model.addAttribute("totalAmount",productRepository.findTotalAmountByIsFalse());
+        }
+
         return "/shoplist";
     }
 

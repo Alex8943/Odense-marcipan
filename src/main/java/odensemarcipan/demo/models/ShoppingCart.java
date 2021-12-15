@@ -22,6 +22,9 @@ public class ShoppingCart {
     @Column
     private int amount;
 
+    @Column
+    private int totalAmount;
+
     @ManyToOne
     @JoinColumn(name = "productId",nullable = false)
     @JsonIgnore
