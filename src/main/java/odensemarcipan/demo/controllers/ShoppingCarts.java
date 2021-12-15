@@ -24,15 +24,13 @@ public class ShoppingCarts {
     ZipcodeRepository zipcodeRepository;
 
 
+
     @GetMapping("/showshoppincart")
     public String showShoppingCart(Model model){
         model.addAttribute("products",productRepository.findByIsBought());
         model.addAttribute("customer",new Customer());
         if(productRepository.findSumByIsBoughtIsFalse()!=null) {
             model.addAttribute("totalPrice", productRepository.findSumByIsBoughtIsFalse());
-        }
-        if(productRepository.findByIsBought()!=null){
-            model.addAttribute("totalAmount",productRepository.findTotalAmountByIsFalse());
         }
 
         return "/shoplist";
